@@ -1,12 +1,14 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
+import Layout from "./Components/Layouts/Layout";
+//import App from "./App";
 
+document.title = "Dashboard Design";
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
-    <App />
+    <Layout />
   </StrictMode>,
   rootElement
 );
