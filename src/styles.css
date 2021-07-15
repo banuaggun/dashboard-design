@@ -1,4 +1,56 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+--root {
+  --bg-main: #ffffff;
+  --bg-second: #fafafb;
+  --text-color: #707070;
+  --text-color2: #ffffff;
+  --color1: darkblue;
+  --color2: mediumblue;
+
+  --sidebarWidth: 300px;
+  --borderRadius: 15px;
+  --topNavbarHeight: 110px;
+  --transitionCubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+  letter-spacing: 0.7px;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  color: var(--color1);
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  color: var(--text-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+input {
+  border: 2px solid transparent;
+  outline: 0;
+}
+
+input:focus {
+  border: 2px solid var(--color1);
 }

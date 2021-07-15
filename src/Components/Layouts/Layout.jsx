@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Layout.css";
+
 import Sidebar from "../Sidebars/Sidebar";
 import Routes from "../Routes";
 

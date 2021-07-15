@@ -1,0 +1,13 @@
+.layout {
+  color: var(--text-color);
+}
+
+.layoutContent {
+  padding-left: var(--sidebarWidth);
+  background-color: var(--bg-second);
+  min-height: 100vh;
+}
+
+.layoutContent-Main {
+  padding: 30px;
+}
