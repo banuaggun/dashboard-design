@@ -1,12 +1,22 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
+import sidebar_items from "../../Assets/Data/SidebarRoutes.json";
+
 import "./Sidebar.css";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      sidebar
-      <div className="sidebarLogo"></div>
+      <div className="sidebarLogo">
+        <img src="" alt="logo" />
+      </div>
+      {sidebar_items.map((item, index) => (
+        <Link to={item.route} key={index}>
+          <div>{item.display_name}</div>
+        </Link>
+      ))}
     </div>
   );
 };
