@@ -1,7 +1,8 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 
-import "./styles.css";
+import "./Assets/css/styles.css";
+import "./Assets/css/grid.css";
 
 import Layout from "./Components/Layouts/Layout";
 //import App from "./App";
