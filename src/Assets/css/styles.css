@@ -1,4 +1,4 @@
---root {
+:root {
   --bg-main: #ffffff;
   --bg-second: #fafafb;
   --text-color: #707070;
@@ -8,6 +8,7 @@
 
   --sidebarWidth: 300px;
   --borderRadius: 15px;
+  --boxShadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   --topNavbarHeight: 110px;
   --transitionCubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }

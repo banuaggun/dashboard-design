@@ -1,0 +1,51 @@
+.sidebar {
+  min-width: var(--sidebarWidth);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--bg-main);
+  box-shadow: var(--boxShadow);
+}
+
+.sidebarLogo {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebarLogo > img {
+  height: 45px;
+}
+
+.sidebar__item {
+  padding: 0 20px;
+}
+
+.sidebar__item_inner {
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  transition: color 0.3s ease 0s;
+}
+
+.sidebar__item_inner > i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.sidebar__item_inner > span {
+  text-transform: capitalize;
+}
+
+.sidebar__item_inner:hover {
+  color: var(--color1);
+}
+
+.sidebar__item_inner.active {
+  border-radius: var(--borderRadius);
+  background-image: linear-gradient(to right, var(--color1), var(--color2));
+  color: var(--text-color2);
+}

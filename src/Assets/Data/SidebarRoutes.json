@@ -2,7 +2,7 @@
   {
     "display_name": "Dashboard",
     "route": "/",
-    "icon": "bx bx-category-alt"
+    "icon": "bx bxs-bar-chart-alt-2"
   },
   {
     "display_name": "Customers",
