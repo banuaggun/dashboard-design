@@ -12,7 +12,7 @@
   {
     "display_name": "Products",
     "route": "/products",
-    "icon": "bx bx-package"
+    "icon": "bx bx-purchase-tag-alt"
   },
   {
     "display_name": "Orders",

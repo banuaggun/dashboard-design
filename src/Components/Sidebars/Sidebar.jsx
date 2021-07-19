@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import sidebar_items from "../../Assets/Data/SidebarRoutes.json";
-
+import logo from "../../Assets/Logo/logo.png";
 import "./Sidebar.css";
 
 const SidebarItem = (props) => {
@@ -26,7 +26,7 @@ const Sidebar = (props) => {
   return (
     <div className="sidebar">
       <div className="sidebarLogo">
-        <img src="" alt="logo" />
+        <img src={logo} alt="logo" />
       </div>
       {sidebar_items.map((item, index) => (
         <Link to={item.route} key={index}>

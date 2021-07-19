@@ -1,10 +1,11 @@
 :root {
   --bg-main: #ffffff;
   --bg-second: #fafafb;
-  --text-color: #707070;
+  --text-color: #8e8e8e;
   --text-color2: #ffffff;
-  --color1: darkblue;
-  --color2: mediumblue;
+  --color1: #0b58b4;
+  --color2: #0c55af;
+  --color3: #fefaf4;
 
   --sidebarWidth: 300px;
   --borderRadius: 15px;

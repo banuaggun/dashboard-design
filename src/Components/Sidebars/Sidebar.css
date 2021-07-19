@@ -4,7 +4,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  background-color: var(--bg-main);
+  background-color: snow;
   box-shadow: var(--boxShadow);
 }
 
@@ -16,11 +16,12 @@
 }
 
 .sidebarLogo > img {
-  height: 45px;
+  height: 29px;
+  width: 216.5px;
 }
 
 .sidebar__item {
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 .sidebar__item_inner {
@@ -41,11 +42,17 @@
 }
 
 .sidebar__item_inner:hover {
+  border-radius: 2px;
+  border-bottom: 3px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #0c55af, #fefaf4);
   color: var(--color1);
 }
 
 .sidebar__item_inner.active {
-  border-radius: var(--borderRadius);
-  background-image: linear-gradient(to right, var(--color1), var(--color2));
-  color: var(--text-color2);
+  border-radius: 2px;
+  border-bottom: 4px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #0c55af, #fefaf4);
+  color: var(--color1);
 }
