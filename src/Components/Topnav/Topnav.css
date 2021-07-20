@@ -40,3 +40,18 @@
 .topnavRight-item ~ .topnavRight-item {
   margin-left: 30px;
 }
+
+.notificationItem {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.notificationItem:hover {
+  background-color: violet;
+}
+
+.notificationItem > i {
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
