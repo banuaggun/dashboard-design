@@ -6,13 +6,15 @@ import Dropdown from "../Dropdowns/Dropdown";
 
 import notifications from "../../Assets/Data/Notifications.json";
 
+import userImage from "../../Assets/images/gokyuzu.png";
+
 import userMenu from "../../Assets/Data/UserMenus.json";
 
 import "./Topnav.css";
 
 const currUser = {
-  displayName: "John Doe"
-  /*image: userImage*/
+  displayName: "John Doe",
+  image: userImage
 };
 
 const renderNotificationItem = (item, index) => (
@@ -25,10 +27,19 @@ const renderNotificationItem = (item, index) => (
 const renderUserToggle = (user) => (
   <div className="topnavRight-user">
     <div className="topnavRight-user-image">
-      <img src="" alt="user photo" />
+      <img src={user.image} alt="" />
     </div>
     <div className="topnavRight-user-name">{user.displayName}</div>
   </div>
+);
+
+const renderUserMenu = (item, index) => (
+  <Link to="/" key={index}>
+    <div className="notificationItem">
+      <i className={item.icon}></i>
+      <span>{item.content}</span>
+    </div>
+  </Link>
 );
 
 const Topnav = () => {
@@ -40,7 +51,11 @@ const Topnav = () => {
       </div>
       <div className="topnavRight">
         <div className="topnavRight-item">
-          <Dropdown customToggle={() => renderUserToggle(currUser)} />
+          <Dropdown
+            customToggle={() => renderUserToggle(currUser)}
+            contentData={userMenu}
+            renderItems={(item, index) => renderUserMenu(item, index)}
+          />
           {/*dropdown here*/}
         </div>
         <div className="topnavRight-item">
