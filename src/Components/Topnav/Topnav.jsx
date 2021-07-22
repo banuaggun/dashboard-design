@@ -46,8 +46,8 @@ const Topnav = () => {
   return (
     <div className="topnav">
       <div className="topnavSearch">
-        <input type="text" placeholder="search here..." />
-        <i className="bx bx-search-alt"></i>
+        <i className="bx bx-search"></i>
+        <input type="text" placeholder="Search..." />
       </div>
       <div className="topnavRight">
         <div className="topnavRight-item">

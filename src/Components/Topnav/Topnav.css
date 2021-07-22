@@ -9,27 +9,41 @@
 .topnavSearch {
   position: relative;
   height: 50px;
-  background-color: var(--bg-main);
+  background-color: transparent;
   display: flex;
   align-items: center;
-  box-shadow: var(--boxShadow);
-  border-radius: var(--borderRadius);
   overflow: hidden;
 }
 
 .topnavSearch > input {
   height: 100%;
   width: 100%;
-  padding: 10px 60px 10px 20px;
+  border: none;
+  background-color: transparent;
+  border-radius: 2px;
+  border-bottom: 2px solid #0c55af;
+  padding: 10px 60px 5px 20px;
   font: size 1rem;
-  border-radius: var(--borderRadius);
   color: var(--text-color1);
-  background-color: var(--bg-main);
+  box-sizing: border-box;
 }
+
+.topnavSearch > input:hover,
+.topnavSearch > input:focus {
+  border: none;
+  border-radius: 2px;
+  border-bottom: 3px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #0c55af, #fefaf4);
+}
+
+.topnavSearch > input:focus {
+  outline: none;
+}
+
 .topnavSearch > i {
   font-size: 1.5rem;
-  position: absolute;
-  right: 20px;
+  position: relative;
 }
 
 .topnavRight {

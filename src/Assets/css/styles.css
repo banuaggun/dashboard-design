@@ -61,3 +61,19 @@ input:focus {
   margin-bottom: 40px;
   text-transform: capitalize;
 }
+
+.card {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: var(--bg-main);
+  box-shadow: var(--boxShadow);
+  border-radius: var(--borderRadius);
+}
+
+.full-height {
+  height: 100%;
+}
+
+.card.full-height {
+  height: calc(100% - 30px);
+}
