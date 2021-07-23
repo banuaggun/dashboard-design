@@ -77,3 +77,16 @@ input:focus {
 .card.full-height {
   height: calc(100% - 30px);
 }
+
+.cardHeader {
+  text-transform: capitalize;
+}
+
+.cardHeader ~ .cardBody {
+  margin-top: 30px;
+}
+
+.cardFooter {
+  text-align: center;
+  text-transform: capitalize;
+}
