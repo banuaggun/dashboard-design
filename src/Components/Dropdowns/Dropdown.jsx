@@ -32,17 +32,22 @@ const Dropdown = (props) => {
         )}
         {props.customToggle ? props.customToggle() : ""}
       </button>
+
       <div ref={dropdownContentEl} className="dropdownContent">
-        {props.contentData && props.renderItems
-          ? props.contentData.map((item, index) =>
-              props.renderItems(item, index)
-            )
-          : ""}
-        {props.renderFooter ? (
-          <div className="dropdownFooter">{props.renderFooter()}</div>
-        ) : (
-          ""
-        )}
+        <div className="listItem">
+          {props.contentData && props.renderItems
+            ? props.contentData.map((item, index) =>
+                props.renderItems(item, index)
+              )
+            : ""}
+        </div>
+        <div>
+          {props.renderFooter ? (
+            <div className="dropdownFooter">{props.renderFooter()}</div>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </div>
   );

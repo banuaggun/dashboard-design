@@ -50,7 +50,7 @@ const Topnav = () => {
         <input type="text" placeholder="Search..." />
       </div>
       <div className="topnavRight">
-        <div className="topnavRight-item">
+        <div className="topnavRight-item user">
           <Dropdown
             customToggle={() => renderUserToggle(currUser)}
             contentData={userMenu}
@@ -58,13 +58,14 @@ const Topnav = () => {
           />
           {/*dropdown here*/}
         </div>
-        <div className="topnavRight-item">
+        <div className="topnavRight-item bell">
           <Dropdown
             icon="bx bx-bell"
-            badge="12"
+            badge="8"
             contentData={notifications}
             renderItems={(item, index) => renderNotificationItem(item, index)}
             renderFooter={() => <Link to="/">View All</Link>}
+            renderHeader={() => <h5>Notifications</h5>}
           />
           {/*dropdown here*/}
         </div>

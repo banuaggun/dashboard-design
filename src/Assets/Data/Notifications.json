@@ -1,22 +1,21 @@
 [
   {
-    "icon": "bx bx-error",
-    "content": "Curabitur id eros quis nunc suscipit blandit"
+    "content": "Notifications"
   },
   {
-    "icon": "bx bx-package",
-    "content": "Duis malesuada justo eu sapien elementum, in semper diam posuere"
+    "icon": "bx bx-calendar",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
   {
-    "icon": "bx bx-cart",
-    "content": "Donec at nisi sit amet tortor commodo porttitor pretium a erat"
+    "icon": "bx bx-user-pin",
+    "content": "Nullam a sapien vitae ex ultrices tincidunt."
   },
   {
-    "icon": "bx bx-error",
-    "content": "In gravida mauris et nisi"
+    "icon": "bx bx-purchase-tag-alt",
+    "content": "Donec maximus leo non lorem dapibus consequat."
   },
   {
-    "icon": "bx bx-cart",
-    "content": "Curabitur id eros quis nunc suscipit blandit"
+    "icon": "bx bx-receipt",
+    "content": "Maecenas vitae nulla at massa sagittis dignissim vitae sit amet erat."
   }
 ]
