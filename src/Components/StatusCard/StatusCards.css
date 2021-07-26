@@ -1,37 +1,54 @@
 .statusCard {
-  padding: 30px;
   display: flex;
   align-items: center;
-  background-color: var(--bg-main);
-  box-shadow: var(--boxShadow);
-  border-radius: var(--borderRadius);
   position: relative;
   overflow: hidden;
   z-index: 1;
   transition: color 0.5s ease 0s;
+
+  width: 230px;
+  height: 130px;
   margin-bottom: 30px;
+  background-color: #fefaf4;
+  box-shadow: 0 4px 6px rgba(142, 142, 142, 0.59);
+  border-radius: 10px;
+
+  padding: 29px 32px 29px 33px;
 }
 
-.statusCard-icon {
-  width: 30%;
-  height: 100%;
-  font-size: 3rem;
+.statusCard-info {
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
 }
 
-.statusCard-info {
-  flex-grow: 1;
-  text-align: center;
-  z-index: 1;
+.statusCard-info > span {
+  font-size: 25px;
+  font-weight: bold;
   text-transform: capitalize;
+  color: #4f4d5c;
 }
 
-.statusCard-info > h4 {
-  margin-bottom: 10px;
-  font-size: 2.5rem;
+.statusCard-info > i {
+  font-size: 40px;
+  flex-grow: 1;
+  text-align: right;
+  z-index: 1;
+  color: #4f4d5c;
+}
+
+.area {
+  border: 1px solid purple;
+  width: 165px;
+  height: 72px;
+}
+
+.statusCard-title {
+  border: 1px solid green;
+  font-size: 15px;
+  color: rgba(142, 142, 142, 0.5);
+  margin-bottom: 15px;
 }
 
 .statusCard::before {

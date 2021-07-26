@@ -10,6 +10,8 @@ import StatusCards from "../Components/StatusCard/StatusCards";
 
 import statusCards from "../Assets/Data/statusCard.json";
 
+import "../Assets/css/Dashboard.css";
+
 const chartOptions = {
   series: [
     {
@@ -115,11 +117,11 @@ const Dashboard = () => {
             {statusCards.map((item, index) => (
               <div className="col-6">
                 {/*statuscard data*/}
-                {item.title}
+
                 <StatusCards
-                  icon={item.icon}
-                  count={item.count}
                   title={item.title}
+                  count={item.count}
+                  icon={item.icon}
                 />
               </div>
             ))}

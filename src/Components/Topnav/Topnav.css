@@ -57,20 +57,19 @@
   margin-right: 30px;
 }
 
-.user {
-  border: 1px solid green;
-}
-
-.userMenuItem {
-  border: 5px solid pink;
-}
-
-.topnavRight-item.bell {
+.topnavRight-item.bell,
+.topNavRight-item.user {
   color: rgba(142, 142, 142, 0.59) !important;
   font-size: 24px !important;
 }
 
-.notificationItem {
+.topnavRight-user:hover,
+.topNavRight-user.active {
+  color: #0c55af;
+}
+
+.notificationItem,
+.userItem {
   display: flex;
   align-items: center;
   padding-top: 5px;
@@ -87,7 +86,8 @@
   cursor: text;
 }
 
-.notificationItem:hover {
+.notificationItem:hover,
+.userItem:hover {
   cursor: pointer;
   border-radius: 2px;
   border-bottom: 3px solid transparent;
