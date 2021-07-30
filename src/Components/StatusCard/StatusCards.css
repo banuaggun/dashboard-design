@@ -34,18 +34,21 @@
   font-size: 40px;
   flex-grow: 1;
   text-align: right;
+  justify-items: space-between;
+  align-items: right;
   z-index: 1;
   color: #4f4d5c;
 }
 
+/*
 .area {
-  border: 1px solid purple;
+  border: 1px solid transparent;
   width: 165px;
   height: 72px;
 }
+*/
 
 .statusCard-title {
-  border: 1px solid green;
   font-size: 15px;
   color: rgba(142, 142, 142, 0.5);
   margin-bottom: 15px;
@@ -55,7 +58,8 @@
   content: "";
   width: 100%;
   padding-top: 100%;
-  border-radius: 50%;
+  color: whitesmoke;
+  border-radius: 10px;
   background-image: linear-gradient(to top right, var(--color1), var(--color2));
   position: absolute;
   left: -50%;
@@ -66,8 +70,9 @@
 
 .statusCard:hover::before {
   transform: scale(3);
+  color: whitesmoke;
 }
 
 .statusCard:hover {
-  color: var(--text-color2);
+  color: var(--text-color);
 }

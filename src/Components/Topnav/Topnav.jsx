@@ -47,7 +47,7 @@ const Topnav = () => {
     <div className="topnav">
       <div className="topnavSearch">
         <i className="bx bx-search"></i>
-        <input type="text" placeholder="Search..." />
+        <input type="search" name="focus" placeholder="Search..." />
       </div>
       <div className="topnavRight">
         <div className="topnavRight-item user">

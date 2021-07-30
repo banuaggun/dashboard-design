@@ -9,10 +9,10 @@
 .topnavSearch {
   position: relative;
   height: 30px;
+  width: 30%;
   background-color: transparent;
   display: flex;
   align-items: center;
-  overflow: hidden;
 }
 
 .topnavSearch > input {
@@ -23,8 +23,8 @@
   border-radius: 2px;
   border-bottom: 2px solid #0c55af;
   padding: 10px 60px 5px 20px;
-  font: size 1rem;
-  color: var(--text-color1);
+  font-size: 1rem;
+  color: var(--text-color);
   box-sizing: border-box;
 }
 
@@ -45,6 +45,18 @@
   font-size: 1.5rem;
   position: relative;
   left: 20px;
+}
+
+.topnavSearch::-webkit-search-cancel-button {
+  width: 60px;
+  height: 60px;
+  background-color: #0c55af;
+  color: #fefaf4;
+  position: relative;
+  right: 0px;
+  line-height: 2rem;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
 .topnavRight {
