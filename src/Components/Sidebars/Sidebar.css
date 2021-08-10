@@ -4,8 +4,9 @@
   position: fixed;
   left: 0;
   top: 0;
-  background-color: snow;
+  background-color: var(--background);
   box-shadow: var(--boxShadow);
+  color: var(--textColor);
 }
 
 .sidebarLogo {
@@ -20,11 +21,11 @@
   width: 216.5px;
 }
 
-.sidebar__item {
+.sidebarItem {
   padding: 0 40px;
 }
 
-.sidebar__item_inner {
+.SidebarItemInner {
   padding: 15px 25px;
   display: flex;
   align-items: center;
@@ -32,27 +33,24 @@
   transition: color 0.3s ease 0s;
 }
 
-.sidebar__item_inner > i {
+.SidebarItemInner > i {
   margin-right: 10px;
   font-size: 1.5rem;
 }
 
-.sidebar__item_inner > span {
+.SidebarItemInner > span {
   text-transform: capitalize;
 }
 
-.sidebar__item_inner:hover {
-  border-radius: 2px;
-  border-bottom: 3px solid transparent;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #0c55af, #fefaf4);
-  color: var(--color1);
-}
-
-.sidebar__item_inner.active {
+.SidebarItemInner:hover,
+.SidebarItemInner.active {
   border-radius: 2px;
   border-bottom: 4px solid transparent;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #0c55af, #fefaf4);
-  color: var(--color1);
+  border-image-source: linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  color: var(--textColor3);
 }

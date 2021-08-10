@@ -6,59 +6,6 @@
   height: var(--topnavHeight);
 }
 
-.topnavSearch {
-  position: relative;
-  height: 30px;
-  width: 30%;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-}
-
-.topnavSearch > input {
-  height: 100%;
-  width: 100%;
-  border: none;
-  background-color: transparent;
-  border-radius: 2px;
-  border-bottom: 2px solid #0c55af;
-  padding: 10px 60px 5px 20px;
-  font-size: 1rem;
-  color: var(--text-color);
-  box-sizing: border-box;
-}
-
-.topnavSearch > input:hover,
-.topnavSearch > input:focus {
-  border: none;
-  border-radius: 2px;
-  border-bottom: 3px solid transparent;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #0c55af, #fefaf4);
-}
-
-.topnavSearch > input:focus {
-  outline: none;
-}
-
-.topnavSearch > i {
-  font-size: 1.5rem;
-  position: relative;
-  left: 20px;
-}
-
-.topnavSearch::-webkit-search-cancel-button {
-  width: 60px;
-  height: 60px;
-  background-color: #0c55af;
-  color: #fefaf4;
-  position: relative;
-  right: 0px;
-  line-height: 2rem;
-  cursor: pointer;
-  font-size: 2rem;
-}
-
 .topnavRight {
   display: flex;
   align-items: center;
@@ -134,4 +81,8 @@
 .topnavRight-user-name {
   font-size: 1rem;
   font-weight: 600;
+}
+
+.notification-list.icon {
+  color: green;
 }

@@ -5,9 +5,10 @@
   overflow: hidden;
   z-index: 1;
   transition: color 0.5s ease 0s;
-
+  /*
   width: 230px;
   height: 130px;
+  */
   margin-bottom: 30px;
   background-color: #fefaf4;
   box-shadow: 0 4px 6px rgba(142, 142, 142, 0.59);
@@ -18,9 +19,14 @@
 
 .statusCard-info {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  flex-direction: row;
   z-index: 1;
+}
+
+.area {
+  width: 100%;
 }
 
 .statusCard-info > span {
@@ -31,11 +37,7 @@
 }
 
 .statusCard-info > i {
-  font-size: 40px;
-  flex-grow: 1;
-  text-align: right;
-  justify-items: space-between;
-  align-items: right;
+  font-size: 2.5rem;
   z-index: 1;
   color: #4f4d5c;
 }
@@ -50,7 +52,7 @@
 
 .statusCard-title {
   font-size: 15px;
-  color: rgba(142, 142, 142, 0.5);
+  color: rgba(142, 142, 142, 1);
   margin-bottom: 15px;
 }
 
@@ -58,7 +60,7 @@
   content: "";
   width: 100%;
   padding-top: 100%;
-  color: whitesmoke;
+  color: whitesmoke !important;
   border-radius: 10px;
   background-image: linear-gradient(to top right, var(--color1), var(--color2));
   position: absolute;
@@ -70,9 +72,11 @@
 
 .statusCard:hover::before {
   transform: scale(3);
-  color: whitesmoke;
+  color: whitesmoke !important;
 }
 
 .statusCard:hover {
-  color: var(--text-color);
+  color: whitesmoke !important;
+  z-index: 5;
+  border: 5px solid green;
 }

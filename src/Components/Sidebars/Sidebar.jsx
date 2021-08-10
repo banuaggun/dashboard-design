@@ -2,15 +2,17 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import sidebar_items from "../../Assets/Data/SidebarRoutes.json";
+import SidebarItems from "../../Assets/Data/SidebarRoutes.json";
+
 import logo from "../../Assets/Logo/logo.png";
+
 import "./Sidebar.css";
 
 const SidebarItem = (props) => {
   const active = props.active ? "active" : "";
   return (
-    <div className="sidebar__item">
-      <div className={`sidebar__item_inner ${active}`}>
+    <div className="sidebarItem">
+      <div className={`SidebarItemInner ${active}`}>
         <i className={props.icon}></i>
         <span>{props.title}</span>
       </div>
@@ -19,7 +21,7 @@ const SidebarItem = (props) => {
 };
 
 const Sidebar = (props) => {
-  const activeItem = sidebar_items.findIndex(
+  const activeItem = SidebarItems.findIndex(
     (item) => item.route === props.location.pathname
   );
 
@@ -28,10 +30,10 @@ const Sidebar = (props) => {
       <div className="sidebarLogo">
         <img src={logo} alt="logo" />
       </div>
-      {sidebar_items.map((item, index) => (
+      {SidebarItems.map((item, index) => (
         <Link to={item.route} key={index}>
           <SidebarItem
-            title={item.display_name}
+            title={item.displayName}
             icon={item.icon}
             active={index === activeItem}
           />

@@ -35,6 +35,11 @@ const Dropdown = (props) => {
 
       <div ref={dropdownContentEl} className="dropdownContent">
         <div className="listItem">
+          {props.renderHeader ? (
+            <div className="dropdownHeader">{props.renderHeader()}</div>
+          ) : (
+            ""
+          )}
           {props.contentData && props.renderItems
             ? props.contentData.map((item, index) =>
                 props.renderItems(item, index)

@@ -10,6 +10,8 @@ import userImage from "../../Assets/images/gokyuzu.png";
 
 import userMenu from "../../Assets/Data/UserMenus.json";
 
+import Search from "./SearchArea/Search";
+
 import "./Topnav.css";
 
 const currUser = {
@@ -45,17 +47,13 @@ const renderUserMenu = (item, index) => (
 const Topnav = () => {
   return (
     <div className="topnav">
-      <div className="topnavSearch">
-        <i className="bx bx-search"></i>
-        <input type="search" name="focus" placeholder="Search..." />
-      </div>
+      <Search />
       <div className="topnavRight">
         <div className="topnavRight-item user">
           <Dropdown
             customToggle={() => renderUserToggle(currUser)}
             contentData={userMenu}
             renderItems={(item, index) => renderUserMenu(item, index)}
-            renderHeader={() => <h5>Profile</h5>}
           />
           {/*dropdown here*/}
         </div>

@@ -6,3 +6,11 @@
   color: #4d4f5c;
   margin-bottom: 30px;
 }
+
+.grafik {
+  box-shadow: 0 4px 10px rgba(142, 142, 142, 0.59);
+}
+
+.grafik.options {
+  border: 1px solid green;
+}

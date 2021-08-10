@@ -51,10 +51,17 @@
   transform-origin: top right;
   transform: scale(0);
   transition: transform 0.3s ease 0s;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
   font-weight: 500;
   color: #8e8e8e;
+}
+
+.listIcon {
+  color: darkblue;
+}
+.listContent {
+  color: purple;
 }
 
 .dropdownContent.active {
@@ -62,10 +69,10 @@
   transition: transform 0.5s var(--transitionCubic);
 }
 
-.dropdownContent-header {
+.dropdownHeader {
   font-size: 1rem;
   color: #0b58b4;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .dropdownFooter {
