@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -54,6 +54,8 @@ const Topnav = () => {
             customToggle={() => renderUserToggle(currUser)}
             contentData={userMenu}
             renderItems={(item, index) => renderUserMenu(item, index)}
+            renderHeader={() => <h5>View Profile</h5>}
+            renderFooter={() => <Link to="/">Log Out</Link>}
           />
           {/*dropdown here*/}
         </div>

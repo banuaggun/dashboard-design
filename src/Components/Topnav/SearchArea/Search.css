@@ -33,7 +33,11 @@
   border-radius: 2px !important;
   border-bottom: 3px solid transparent !important;
   border-image-slice: 1 !important;
-  border-image-source: linear-gradient(to right, #0c55af, #fefaf4) !important;
+  border-image-source: linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  ) !important;
 }
 
 .search input {
