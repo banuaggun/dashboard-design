@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 
 import "./Dropdown.css";
 
+import IconBell from "../Topnav/IconBellArea/IconBell";
+
 const clickOutsideRef = (contentRef, toggleRef) => {
   document.addEventListener("mousedown", (e) => {
     //when it is click toggle by user
@@ -24,7 +26,7 @@ const Dropdown = (props) => {
   return (
     <div className="dropdown">
       <button ref={dropdownToggleEl} className="dropdownToggle">
-        {props.icon ? <i className={props.icon}></i> : ""}
+        {props.renderIcon ? <IconBell /> : ""}
         {props.badge ? (
           <span className="dropdownToggle-badge">{props.badge}</span>
         ) : (
