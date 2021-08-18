@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 import Chart from "react-apexcharts";
 
-import Table from "../Components/Tables/Table";
+import Table from "../../Components/Tables/Table";
 
-import StatusCards from "../Components/StatusCard/StatusCards";
+import StatusCards from "./StatusCard/StatusCards";
 
-import statusCards from "../Assets/Data/statusCard.json";
+import statusCards from "../../Assets/Data/statusCard.json";
 
-import "../Assets/css/Dashboard.css";
+import "./Dashboard.css";
 
 const chartOptions = {
   series: [
