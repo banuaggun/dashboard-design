@@ -1,15 +1,17 @@
+/*
 .tableWrapper {
   overflow-y: auto;
 }
+*/
 
 table {
-  width: 100px;
+  width: 100%;
   min-width: 400px;
   border-spacing: 0;
 }
 
 thead {
-  background-color: var(--bg-second);
+  background-color: var(--background3);
 }
 
 tr {
@@ -23,6 +25,6 @@ td {
 }
 
 tbody > tr:hover {
-  background-color: var(--color1);
-  color: var(--text-color2);
+  background-color: var(--background2);
+  color: var(--textColor2);
 }
