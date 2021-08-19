@@ -3,14 +3,42 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-weight: bold;
-  color: #4d4f5c;
+  color: var(--textColor4);
   margin-bottom: 30px;
 }
 
-.grafik {
-  box-shadow: 0 4px 10px rgba(142, 142, 142, 0.59);
+.card {
+  padding: 15px 10px;
+  margin-bottom: 30px;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--boxShadow);
+  background-color: var(--background3);
 }
 
-.grafik.options {
-  border: 1px solid green;
+.fullHeight {
+  height: 100%;
+}
+
+.card.fullHeight {
+  height: calc(100% - 30px);
+}
+
+.cardHeader {
+  color: var(--textColor4);
+  text-transform: capitalize;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--textColor);
+}
+
+.cardHeader ~ .cardBody {
+  margin-top: 30px;
+}
+
+.cardFooter {
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: 10px;
+  border-top: 1px solid var(--textColor);
+  color: var(--textColor3);
+  font-weight: 600;
 }

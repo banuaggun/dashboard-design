@@ -6,28 +6,28 @@ import Chart from "react-apexcharts";
 
 import Table from "../../Components/Tables/Table";
 
-import StatusCards from "./StatusCard/StatusCards";
+import StatusCards from "../../Components/StatusCard/StatusCards";
 
 import statusCards from "../../Assets/Data/statusCard.json";
+
+import Badge from "../../Components/Badges/Badge.jsx";
 
 import "./Dashboard.css";
 
 const chartOptions = {
   series: [
     {
-      name: "Online",
+      name: "Online Customers",
       data: [48, 70, 20, 90, 36, 80, 30, 91, 60]
     },
     {
-      name: "Store",
+      name: "Store Customers",
       data: [40, 30, 70, 80, 40, 16, 40, 20, 51, 10]
     }
   ],
   options: {
-    color: ["blue", "pink"],
     chart: {
-      background: "transparent",
-      boxShadow: "0 4px 10px rgba(142, 142, 142, 0.59)"
+      background: "transparent"
     },
     dataLabels: {
       enabled: false
@@ -49,16 +49,16 @@ const chartOptions = {
       ]
     },
     legend: {
-      position: "top"
+      position: "bottom"
     },
     grid: {
-      show: false
+      show: true
     }
   }
 };
 
 const topCustomers = {
-  head: ["user", "order date", "total spending"],
+  head: ["user", "spending"],
   body: [
     {
       id: "#OD1711",
@@ -103,8 +103,68 @@ const renderCustomerHead = (item, index) => <th key={index}>{item}</th>;
 const renderCustomerBody = (item, index) => (
   <tr key={index}>
     <td>{item.user}</td>
-    <td>{item.date}</td>
     <td>{item.price}</td>
+  </tr>
+);
+
+const latestOrders = {
+  header: ["user", "total price", "date", "status"],
+  body: [
+    {
+      id: "#OD1711",
+      user: "john doe",
+      date: "17 Jun 2021",
+      price: "$900",
+      status: "shipping"
+    },
+    {
+      id: "#OD1712",
+      user: "frank iva",
+      date: "1 Jun 2021",
+      price: "$400",
+      status: "paid"
+    },
+    {
+      id: "#OD1713",
+      user: "anthony baker",
+      date: "27 Jun 2021",
+      price: "$200",
+      status: "pending"
+    },
+    {
+      id: "#OD1712",
+      user: "frank iva",
+      date: "1 Jun 2021",
+      price: "$400",
+      status: "paid"
+    },
+    {
+      id: "#OD1713",
+      user: "anthony baker",
+      date: "27 Jun 2021",
+      price: "$200",
+      status: "refund"
+    }
+  ]
+};
+
+const orderStatus = {
+  shipping: "primary",
+  pending: "warning",
+  paid: "success",
+  refund: "danger"
+};
+
+const renderOrderHead = (item, index) => <th key={index}>{item}</th>;
+
+const renderOrderBody = (item, index) => (
+  <tr>
+    <td>{item.user}</td>
+    <td>{item.price}</td>
+    <td>{item.date}</td>
+    <td>
+      <Badge type={orderStatus[item.status]} content={item.status} />
+    </td>
   </tr>
 );
 
@@ -129,7 +189,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="col-6">
-          <div className="card full-height">
+          <div className="card fullHeight">
             {/* graphic area */}
             <Chart
               options={chartOptions.options}
@@ -140,10 +200,10 @@ const Dashboard = () => {
             />
           </div>
         </div>
-        <div className="col-4">
+        <div className="col-5">
           <div className="card">
             <div className="cardHeader">
-              <h1>Top Customers</h1>
+              <h3>Top Customers</h3>
             </div>
             <div className="cardBody">
               {/* table area */}
@@ -159,13 +219,18 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="col-8">
+        <div className="col-7">
           <div className="card">
             <div className="cardHeader">
               <h3>latest orders</h3>
             </div>
             <div className="cardBody">
-              <Table />
+              <Table
+                headData={latestOrders.header}
+                renderHead={(item, index) => renderOrderHead(item, index)}
+                bodyData={latestOrders.body}
+                renderBody={(item, index) => renderOrderBody(item, index)}
+              />
             </div>
             <div className="cardFooter">
               <Link to="/">View All</Link>
