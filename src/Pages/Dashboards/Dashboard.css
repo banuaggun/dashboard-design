@@ -1,5 +1,5 @@
 .pageHeader {
-  font-size: 42px;
+  font-size: 2.63rem; /*2.625rem = 42px */
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-weight: bold;
@@ -8,11 +8,15 @@
 }
 
 .card {
-  padding: 15px 10px;
+  padding: 20px 10px;
   margin-bottom: 30px;
-  border-radius: var(--borderRadius);
-  box-shadow: var(--boxShadow);
+  -webkit-border-radius: var(--borderRadius2);
+  -moz-border-radius: var(--borderRadius2);
+  -ms-border-radius: var(--borderRadius2);
+  -o-border-radius: var(--borderRadius2);
+  border-radius: var(--borderRadius2);
   background-color: var(--background3);
+  border: 1px solid var(--iconColor2);
 }
 
 .fullHeight {
@@ -37,8 +41,8 @@
 .cardFooter {
   text-align: center;
   text-transform: capitalize;
-  padding-top: 10px;
-  border-top: 1px solid var(--textColor);
+  padding-top: 20px;
+  border-top: 1px solid var(--iconColor2);
   color: var(--textColor3);
   font-weight: 600;
 }

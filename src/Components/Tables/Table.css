@@ -10,10 +10,6 @@ table {
   border-spacing: 0;
 }
 
-thead {
-  background-color: var(--background3);
-}
-
 tr {
   text-align: left;
 }
@@ -21,10 +17,10 @@ tr {
 th,
 td {
   text-transform: capitalize;
-  padding: 15px 10px;
+  padding: 15px 2px;
 }
 
 tbody > tr:hover {
-  background-color: var(--background2);
+  background-color: var(--background4);
   color: var(--textColor2);
 }

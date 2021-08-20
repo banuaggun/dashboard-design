@@ -1,8 +1,11 @@
 .badge {
   padding: 6px 10px;
   color: var(--textColor2);
-  border-radius: 10px;
-  box-shadow: var(--boxShadow);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }
 
 .badge-danger {

@@ -1,13 +1,33 @@
 .topnav {
   padding: 30px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
   align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
   justify-content: space-between;
   height: var(--topnavHeight);
 }
 
 .topnavRight {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
   align-items: center;
 }
 
@@ -27,7 +47,15 @@
 
 .notificationItem,
 .userItem {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
   align-items: center;
   padding-top: 5px;
   margin-bottom: 20px;
@@ -46,9 +74,33 @@
 .notificationItem:hover,
 .userItem:hover {
   cursor: pointer;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   border-radius: 2px;
   border-bottom: 3px solid transparent;
   border-image-slice: 1;
+  border-image-source: -webkit-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  border-image-source: -moz-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  border-image-source: -ms-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  border-image-source: -o-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
   border-image-source: linear-gradient(
     to right,
     var(--background2),
@@ -63,13 +115,25 @@
 }
 
 .topnavRight-user {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
   align-items: center;
 }
 
 .topnavRight-user-image {
   width: 40px;
   height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 10px;

@@ -200,7 +200,7 @@ const Dashboard = () => {
             />
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-6">
           <div className="card">
             <div className="cardHeader">
               <h3>Top Customers</h3>
@@ -219,7 +219,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="col-7">
+        <div className="col-6">
           <div className="card">
             <div className="cardHeader">
               <h3>latest orders</h3>
