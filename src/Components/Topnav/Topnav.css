@@ -63,6 +63,10 @@
 }
 /* important */
 
+.notificationItem {
+  padding-bottom: 5px;
+}
+
 .notificationItem:nth-child(1) {
   color: var(--background2);
   font-weight: bold;
@@ -70,7 +74,7 @@
 }
 .notificationItem:nth-child(1):hover {
   border: none;
-  cursor: text;
+  cursor: pointer;
 }
 
 .notificationItem:hover,
