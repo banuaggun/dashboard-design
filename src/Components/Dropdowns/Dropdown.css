@@ -106,7 +106,7 @@
 }
 
 .dropdownHeader {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--textColor3);
   padding-bottom: 10px;
   text-align: center;
@@ -114,9 +114,9 @@
 
 .dropdownFooter {
   padding-top: 20px;
-  border-top: 1px solid var(--textColor);
+  border-top: 1px solid var(--iconColor2);
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.875rem;
   text-align: center;
   color: var(--textColor3);
 }
