@@ -64,7 +64,7 @@
 /* important */
 
 .notificationItem {
-  padding-bottom: 5px;
+  padding-bottom: 2px;
 }
 
 .notificationItem:nth-child(1) {

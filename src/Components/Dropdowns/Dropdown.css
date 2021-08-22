@@ -47,6 +47,7 @@
 }
 
 .dropdownContent {
+  margin-top:5px; /*new*/
   position: absolute;
   top: -webkit-calc(100% + 5px);
   top: -moz-calc(100% + 5px);

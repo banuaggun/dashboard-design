@@ -1,7 +1,7 @@
 .searchArea,
 .search,
 .search input {
-  width: 50% !important;
+  width: auto !important;
   padding: 0 !important;
   margin: 0 !important;
   -webkit-border-radius: none !important;
