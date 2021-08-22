@@ -55,7 +55,11 @@ const Topnav = () => {
             contentData={userMenu}
             renderItems={(item, index) => renderUserMenu(item, index)}
             renderHeader={() => <h5>View Profile</h5>}
-            renderFooter={() => <Link to="/">Log Out</Link>}
+            renderFooter={() => (
+              <Link to="/">
+                <span>Log Out</span>
+              </Link>
+            )}
           />
           {/*dropdown here*/}
         </div>
@@ -65,7 +69,11 @@ const Topnav = () => {
             badge="8"
             contentData={notifications}
             renderItems={(item, index) => renderNotificationItem(item, index)}
-            renderFooter={() => <Link to="/">View All</Link>}
+            renderFooter={() => (
+              <Link to="/">
+                <span>View All</span>
+              </Link>
+            )}
             renderHeader={() => <h5>Notifications</h5>}
           />
           {/*dropdown here*/}
