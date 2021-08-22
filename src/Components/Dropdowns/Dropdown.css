@@ -47,7 +47,7 @@
 }
 
 .dropdownContent {
-  margin-top:5px; /*new*/
+  margin-top: 5px; /*new*/
   position: absolute;
   top: -webkit-calc(100% + 5px);
   top: -moz-calc(100% + 5px);
@@ -109,7 +109,7 @@
 .dropdownHeader {
   font-size: 1.2rem;
   color: var(--textColor3);
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
