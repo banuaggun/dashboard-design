@@ -1,4 +1,4 @@
-<h2><Dashboard Design</h2>
+<h2>Dashboard Design</h2>
 <p>Dashboard Design I keep doing work. In this study, I make my designs with Adobe Xd and transfer them to coding with Reactjs.</p>
  <p>I will prepare other pages in the Sidebar area and the responsive structure in the following processes.</p>
 
