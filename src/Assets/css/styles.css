@@ -17,10 +17,10 @@
   --borderRadius2: 10px;
   --topnavHeight: 110px;
   --transitionCubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  --badgeDanger: rgba(139, 0, 0, 0.8);
-  --badgeSuccess: rgba(0, 128, 0, 0.8);
-  --badgePrimary: rgba(0, 0, 128, 0.8);
-  --badgeWarning: rgba(0, 128, 128, 0.8);
+  --badgeDanger: rgb(138, 38, 38);
+  --badgeSuccess: rgb(53, 145, 53);
+  --badgePrimary: rgb(30, 30, 119);
+  --badgeWarning: rgb(231, 217, 16);
 }
 
 * {
@@ -31,7 +31,7 @@
 }
 
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Trebuchet MS";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
   letter-spacing: 0.7px;

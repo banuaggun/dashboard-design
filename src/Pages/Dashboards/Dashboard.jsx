@@ -202,7 +202,7 @@ const Dashboard = () => {
         </div>
         <div className="col-6">
           <div className="card">
-            <div className="cardHeader">
+            <div className="cardHeader tableCardHeader">
               <h3>Top Customers</h3>
             </div>
             <div className="cardBody">
