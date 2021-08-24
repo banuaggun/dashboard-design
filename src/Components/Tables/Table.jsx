@@ -5,7 +5,7 @@ import "./Table.css";
 const Table = (props) => {
   return (
     <div>
-      <div className="tableWrapper">
+      <div className="tableWrapper col-12">
         <table>
           {props.headData && props.renderHead ? (
             <thead>
