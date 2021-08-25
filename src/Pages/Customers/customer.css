@@ -1,0 +1,13 @@
+.customerTable {
+  padding: 0px;
+  border: 1px solid green;
+}
+
+.customerTable tr {
+  padding: 0;
+  border: 1px solid pink;
+}
+
+.customerTable td {
+  border: 1px solid blue;
+}
