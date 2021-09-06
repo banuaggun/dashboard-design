@@ -12,6 +12,8 @@ import userMenu from "../../Assets/Data/UserMenus.json";
 
 import Search from "./SearchArea/Search";
 
+import IconBell from "./IconBellArea/IconBell";
+
 import "./Topnav.css";
 
 const currUser = {
