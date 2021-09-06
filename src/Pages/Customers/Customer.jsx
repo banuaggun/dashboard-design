@@ -6,6 +6,10 @@ import CustomerList from "../../Assets/Data/CustomerList.json";
 
 import "./customer.css";
 
+import CustomerGuide from "../../Components/CustomerGuides/CustomerGuide";
+
+import AddUser from "../../Components/UserForm/AddUser";
+
 const customerHead = [
   "",
   "name",
@@ -38,6 +42,7 @@ const Customers = () => {
       <h2 className="pageHeader">Customers</h2>
       <div className="row">
         <div className="col-12 customerTable">
+          <AddUser />
           <div className="card">
             <div className="cardBody">
               <Table

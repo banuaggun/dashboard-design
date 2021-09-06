@@ -66,3 +66,37 @@ tbody > tr:hover {
   );
   color: var(--textColor2);
 }
+
+.tablePagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.tablePaginationItem ~ .tablePaginationItem {
+  margin-left: 10px;
+}
+
+.tablePaginationItem {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tablePaginationItem.active,
+.tablePaginationItem.active:hover {
+  background-color: var(--background4);
+  color: var(--textColor2);
+  font-weight: 600;
+}
+
+.tablePaginationItem:hover {
+  color: var(--textColor2);
+  background-color: var(--background2);
+}
