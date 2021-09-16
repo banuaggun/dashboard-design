@@ -33,7 +33,7 @@ class AddUser extends Component {
         <Animation pose={visible ? "visible" : "hidden"}>
           <div className="card">
             <div className="card-header">
-              <h4>Add User Form</h4>
+              <h4>Add Customer Form</h4>
             </div>
             <div className="card-body">
               <form>
@@ -49,29 +49,61 @@ class AddUser extends Component {
                 </div>
                 <br />
                 <div className="form-group">
-                  <label htmlFor="department">department</label>
+                  <label htmlFor="email">Email</label>
                   <input
                     type="text"
-                    name="department"
-                    id="department"
-                    placeholder="Enter department<"
+                    name="email"
+                    id="email"
+                    placeholder="Enter email"
                     className="form-control"
                   />
                 </div>
                 <br />
                 <div className="form-group">
-                  <label htmlFor="salary">Salary</label>
+                  <label htmlFor="phone">Phone</label>
+                  <input
+                    type="number"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter phone"
+                    className="form-control"
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="location">Location</label>
                   <input
                     type="text"
-                    name="salary"
-                    id="salary"
-                    placeholder="Enter salary"
+                    name="location"
+                    id="location"
+                    placeholder="Enter location"
+                    className="form-control"
+                  />
+                </div>
+                <br />
+                <div className="form-group">
+                  <label htmlFor="totalOrders">Total Orders</label>
+                  <input
+                    type="number"
+                    name="totalOrders"
+                    id="totalOrders"
+                    placeholder="Enter Total Orders"
+                    className="form-control"
+                  />
+                </div>
+                <br />
+                <div className="form-group">
+                  <label htmlFor="totalSpend">Total Spend</label>
+                  <input
+                    type="number"
+                    name="totalSpend"
+                    id="totalSpend"
+                    placeholder="Enter Total Spend"
                     className="form-control"
                   />
                 </div>
                 <br />
                 <button className="btn btn-primary btn-block" type="submit">
-                  Add User
+                  Add Customer
                 </button>
               </form>
             </div>

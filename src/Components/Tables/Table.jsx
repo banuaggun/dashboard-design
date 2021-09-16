@@ -31,6 +31,9 @@ const Table = (props) => {
 
     setCurrPage(page);
   };
+
+  const [showResults, setShowResults] = React.useState(false);
+
   return (
     <div>
       <div className="tableWrapper">
@@ -45,7 +48,12 @@ const Table = (props) => {
             </thead>
           ) : null}
           {props.bodyData && props.renderBody ? (
-            <tbody>
+            <tbody
+              onClick={() => {
+                setShowResults(!showResults);
+              }}
+            >
+              {showResults ? <div>yeni vikfiler</div> : null}
               {dataShow.map((item, index) => props.renderBody(item, index))}
               {/*
               {props.bodyData.map((item, index) =>
@@ -74,5 +82,11 @@ const Table = (props) => {
     </div>
   );
 };
+
+const Results = () => (
+  <div id="results" className="search-results">
+    Some Results
+  </div>
+);
 
 export default Table;
