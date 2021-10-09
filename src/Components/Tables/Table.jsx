@@ -53,12 +53,13 @@ const Table = (props) => {
                 setShowResults(!showResults);
               }}
             >
-              {showResults ? <div>yeni vikfiler</div> : null}
               {dataShow.map((item, index) => props.renderBody(item, index))}
               {/*
               {props.bodyData.map((item, index) =>
                 props.renderBody(item, index)
               )}
+                            {dataShow.map((item, index) => renderDataShow(item, index))}
+
               */}
             </tbody>
           ) : null}
@@ -82,11 +83,5 @@ const Table = (props) => {
     </div>
   );
 };
-
-const Results = () => (
-  <div id="results" className="search-results">
-    Some Results
-  </div>
-);
 
 export default Table;

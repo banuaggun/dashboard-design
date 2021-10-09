@@ -13,7 +13,23 @@
   color: var(--textColor);
 }
 
+.logoArea {
+  height: 140px;
+  /*border: 1px solid purple; */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+
 .sidebarLogo {
+  /* border: 1px solid green; */
   height: 110px;
   display: -webkit-flex;
   display: -moz-flex;

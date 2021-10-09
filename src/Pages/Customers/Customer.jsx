@@ -6,8 +6,6 @@ import CustomerList from "../../Assets/Data/CustomerList.json";
 
 import "./customer.css";
 
-import CustomerGuide from "../../Components/CustomerGuides/CustomerGuide";
-
 import AddUser from "../../Components/UserForm/AddUser";
 
 const customerHead = ["", "name", "total orders", "total spend"];
@@ -18,13 +16,31 @@ const renderHead = (item, index) => <th key={index}>{item}</th>;
 
 const renderBody = (item, index) => (
   <tr key={index}>
-    <td style={{ border: "1px solid violet", padding: "5px 2px" }}>
+    <td
+      style={{
+        textAlign: "center",
+        fontWeight: "600",
+        border: "1px solid transparent",
+        padding: "5px 2px",
+        color: "var(--textColor)"
+      }}
+    >
       {item.id}
     </td>
     <td>{item.name}</td>
     <td>{item.totalOrders}</td>
     <td>{item.totalSpend}</td>
   </tr>
+);
+
+const renderDataShow = (item, index) => (
+  <div>
+    <tr key={index}>
+      <td>{item.email}</td>
+      <td>{item.phone}</td>
+      <td>{item.location}</td>
+    </tr>
+  </div>
 );
 
 /* 
@@ -39,17 +55,23 @@ class Customers extends Component {
       <div>
         <h2 className="pageHeader">Customers</h2>
         <div className="row">
-          <div className="col-12 customerTable">
-            <AddUser />
-            <div className="card">
-              <div className="cardBody">
+          <div className="col-12 customerTableArea">
+            <div className="userAddForm" style={{ display: "none" }}>
+              <AddUser />
+            </div>
+            <div className="customerTableInnerArea">
+              <div className="customerTableInner">
                 <Table
                   limit="10"
                   headData={customerHead}
                   renderHead={(item, index) => renderHead(item, index)}
                   bodyData={CustomerList}
                   renderBody={(item, index) => renderBody(item, index)}
-                  className="customerTable"
+                />
+
+                <div
+                  innerData={CustomerList}
+                  renderDataShow={(item, index) => renderDataShow(item, index)}
                 />
               </div>
             </div>

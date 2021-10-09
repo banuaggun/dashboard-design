@@ -21,7 +21,7 @@ table {
 }
 
 tr {
-  text-align: left;
+  text-align: justify;
 }
 
 td {
@@ -42,27 +42,27 @@ tbody > tr:hover {
   background-image: -webkit-linear-gradient(
     to right,
     var(--background2),
-    var(--background3)
+    var(--iconColor2)
   );
   background-image: -moz-linear-gradient(
     to right,
     var(--background2),
-    var(--background3)
+    var(--iconColor2)
   );
   background-image: -ms-linear-gradient(
     to right,
     var(--background2),
-    var(--background3)
+    var(--iconColor2)
   );
   background-image: -o-linear-gradient(
     to right,
     var(--background2),
-    var(--background3)
+    var(--iconColor2)
   );
   background-image: linear-gradient(
     to right,
     var(--background2),
-    var(--background3)
+    var(--iconColor2)
   );
   color: var(--textColor2);
 }
@@ -73,6 +73,7 @@ tbody > tr:hover {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .tablePaginationItem ~ .tablePaginationItem {
@@ -80,23 +81,31 @@ tbody > tr:hover {
 }
 
 .tablePaginationItem {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
   justify-content: center;
   cursor: pointer;
 }
 
 .tablePaginationItem.active,
 .tablePaginationItem.active:hover {
-  background-color: var(--background4);
+  background-color: var(--background2);
   color: var(--textColor2);
   font-weight: 600;
 }
 
 .tablePaginationItem:hover {
   color: var(--textColor2);
-  background-color: var(--background2);
+  background-color: var(--background4);
 }
