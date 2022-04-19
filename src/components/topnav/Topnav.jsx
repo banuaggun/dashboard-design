@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 import Dropdown from "../Dropdowns/Dropdown";
 
-import notifications from "../../Assets/Data/Notifications.json";
+import notifications from "../../assets/Data/Notifications.json";
 
-import userImage from "../../Assets/images/gokyuzu.png";
+import userImage from "../../assets/images/gokyuzu.png";
 
-import userMenu from "../../Assets/Data/UserMenus.json";
+import userMenu from "../../assets/Data/UserMenus.json";
 
 import Search from "./SearchArea/Search";
 

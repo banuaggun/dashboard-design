@@ -59,7 +59,6 @@ const Table = (props) => {
                 props.renderBody(item, index)
               )}
                             {dataShow.map((item, index) => renderDataShow(item, index))}
-
               */}
             </tbody>
           ) : null}

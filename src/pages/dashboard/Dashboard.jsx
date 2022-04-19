@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 import Chart from "react-apexcharts";
 
-import Table from "../../Components/Tables/Table";
+import Table from "../../components/Tables/Table";
 
-import StatusCards from "../../Components/StatusCard/StatusCards";
+import StatusCards from "../../components/StatusCard/StatusCards";
 
-import statusCards from "../../Assets/Data/statusCard.json";
+import statusCards from "../../assets/Data/statusCard.json";
 
-import Badge from "../../Components/Badges/Badge.jsx";
+import Badge from "../../components/Badges/Badge.jsx";
 
 import "./Dashboard.css";
 

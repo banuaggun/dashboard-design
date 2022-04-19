@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 
-import Table from "../../Components/Tables/Table";
+import Table from "../../components/Tables/Table";
 
-import CustomerList from "../../Assets/Data/CustomerList.json";
+import CustomerList from "../../assets/Data/CustomerList.json";
 
 import "./customer.css";
-
-import AddUser from "../../Components/UserForm/AddUser";
 
 const customerHead = ["", "name", "total orders", "total spend"];
 
@@ -56,9 +54,6 @@ class Customers extends Component {
         <h2 className="pageHeader">Customers</h2>
         <div className="row">
           <div className="col-12 customerTableArea">
-            <div className="userAddForm" style={{ display: "none" }}>
-              <AddUser />
-            </div>
             <div className="customerTableInnerArea">
               <div className="customerTableInner">
                 <Table
