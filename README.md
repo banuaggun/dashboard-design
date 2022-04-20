@@ -12,6 +12,9 @@
 <li>react-apexcharts</li>
 <li>boxicons</li>
 <li>material-ui-search-bar</li>
+<li>node-sass</li>
+<li>css-loader</li>
+<li>sass-loader</li>
 </ul>
 
 <h4>Behance Link :</h4> <p><a href="https://www.behance.net/gallery/125995097/Dashboard-Design" target="_blank">Dashboard Design</a></p>
