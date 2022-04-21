@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 
 import "./Dropdown.css";
 
-import IconBell from "../topnav/IconBellArea/IconBell";
+import IconBell from "../iconBellArea/IconBell";
 
 const clickOutsideRef = (contentRef, toggleRef) => {
   document.addEventListener("mousedown", (e) => {

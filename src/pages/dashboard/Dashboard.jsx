@@ -8,7 +8,7 @@ import Table from "../../components/Tables/Table";
 
 import StatusCards from "../../components/StatusCard/StatusCards";
 
-import statusCards from "../../assets/Data/statusCard.json";
+import statusCards from "../../assets/data/statusCard.json";
 
 import Badge from "../../components/Badges/Badge.jsx";
 
@@ -170,7 +170,7 @@ const renderOrderBody = (item, index) => (
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="dashboard">
       <h2 className="pageHeader">Dashboard</h2>
       <div className="row">
         <div className="col-6">

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Table from "../../components/Tables/Table";
 
-import CustomerList from "../../assets/Data/CustomerList.json";
+import CustomerList from "../../assets/data/CustomerList.json";
 
 import "./customer.css";
 

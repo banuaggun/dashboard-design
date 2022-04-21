@@ -1,57 +1,59 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Link } from "react-router-dom";
 
-import Dropdown from "../Dropdowns/Dropdown";
+import "./topnav.scss";
 
-import notifications from "../../assets/Data/Notifications.json";
+import Search from "../searchArea/Search";
+
+import Dropdown from "../dropdowns/Dropdown";
+
+import IconBell from "../iconBellArea/IconBell";
+
+import notifications from "../../assets/data/Notifications.json";
+
+import userMenu from "../../assets/data/UserMenus.json";
 
 import userImage from "../../assets/images/gokyuzu.png";
-
-import userMenu from "../../assets/Data/UserMenus.json";
-
-import Search from "./SearchArea/Search";
-
-import IconBell from "./IconBellArea/IconBell";
-
-import "./Topnav.css";
 
 const currUser = {
   displayName: "John Doe",
   image: userImage
 };
 
-const renderNotificationItem = (item, index) => (
-  <div className="notificationItem" key={index}>
-    <i className={item.icon}></i>
-    <span>{item.content}</span>
-  </div>
-);
-
 const renderUserToggle = (user) => (
-  <div className="topnavRight-user">
-    <div className="topnavRight-user-image">
+  <div className="topnav__right__user">
+    <div className="topnav__right__user__image">
       <img src={user.image} alt="" />
     </div>
-    <div className="topnavRight-user-name">{user.displayName}</div>
+    <div className="topnav__right__user__name">{user.displayName}</div>
   </div>
 );
 
 const renderUserMenu = (item, index) => (
   <Link to="/" key={index}>
-    <div className="userItem">
+    <div className="user__item">
       <i className={item.icon}></i>
       <span>{item.content}</span>
     </div>
   </Link>
 );
 
+const renderNotificationItem = (item, index) => (
+  <div className="notification__item" key={index}>
+    <i className={item.icon}></i>
+    <span>{item.content}</span>
+  </div>
+);
+
 const Topnav = () => {
   return (
     <div className="topnav">
-      <Search />
-      <div className="topnavRight">
-        <div className="topnavRight-item user">
+      <div className="topnav__left">
+        <Search />
+      </div>
+      <div className="topnav__right">
+        <div className="topnav__right__user">
           <Dropdown
             customToggle={() => renderUserToggle(currUser)}
             contentData={userMenu}
@@ -63,9 +65,8 @@ const Topnav = () => {
               </Link>
             )}
           />
-          {/*dropdown here*/}
         </div>
-        <div className="topnavRight-item bell">
+        <div className="topnav__right__notifications">
           <Dropdown
             renderIcon={() => <IconBell />}
             badge="8"
@@ -78,12 +79,11 @@ const Topnav = () => {
             )}
             renderHeader={() => <h5>Notifications</h5>}
           />
-          {/*dropdown here*/}
         </div>
-        <div className="topnavRight-item">
-          <Dropdown />
-          {/*theme settings*/}
-        </div>
+      </div>
+      <div>
+        {" "}
+        <Dropdown />
       </div>
     </div>
   );
