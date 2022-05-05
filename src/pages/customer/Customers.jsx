@@ -6,6 +6,8 @@ import CustomerList from "../../assets/data/CustomerList.json";
 
 import "./customer.css";
 
+import Search from "../../components/searchArea/Search";
+
 const customerHead = ["", "name", "total orders", "total spend"];
 
 /* phone, email, location */
@@ -52,6 +54,9 @@ class Customers extends Component {
     return (
       <div>
         <h2 className="pageHeader">Customers</h2>
+        <div className="topnav__left">
+          <Search />
+        </div>
         <div className="row">
           <div className="col-12 customerTableArea">
             <div className="customerTableInnerArea">

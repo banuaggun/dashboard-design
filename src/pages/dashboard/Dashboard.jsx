@@ -12,7 +12,8 @@ import statusCards from "../../assets/data/statusCard.json";
 
 import Badge from "../../components/Badges/Badge.jsx";
 
-import "./Dashboard.css";
+//import "./Dashboard.css";
+import "./dashboard.scss";
 
 const chartOptions = {
   series: [
@@ -171,7 +172,7 @@ const renderOrderBody = (item, index) => (
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <h2 className="pageHeader">Dashboard</h2>
+      <h2 className="page__header">Dashboard</h2>
       <div className="row">
         <div className="col-6">
           <div className="row">

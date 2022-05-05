@@ -4,7 +4,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import Customers from "./pages/customer/Customers";
 import MainLayout from "./layout/MainLayout";
 
-import "./styles.css";
+
 
 function App() {
   return (

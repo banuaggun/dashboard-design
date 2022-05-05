@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SearchBar from "material-ui-search-bar";
 
+
 import "./Search.css";
 
 export default function Search() {

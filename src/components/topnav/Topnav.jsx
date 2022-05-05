@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 import "./topnav.scss";
 
-import Search from "../searchArea/Search";
-
 import Dropdown from "../dropdowns/Dropdown";
 
 import IconBell from "../iconBellArea/IconBell";
@@ -40,7 +38,7 @@ const renderUserMenu = (item, index) => (
 );
 
 const renderNotificationItem = (item, index) => (
-  <div className="notification__item" key={index}>
+  <div className="topnav__right__notification__item" key={index}>
     <i className={item.icon}></i>
     <span>{item.content}</span>
   </div>
@@ -49,9 +47,6 @@ const renderNotificationItem = (item, index) => (
 const Topnav = () => {
   return (
     <div className="topnav">
-      <div className="topnav__left">
-        <Search />
-      </div>
       <div className="topnav__right">
         <div className="topnav__right__user">
           <Dropdown
