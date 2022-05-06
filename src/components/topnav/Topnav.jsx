@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import "./topnav.scss";
+import "./_topnav.scss";
 
 import Dropdown from "../dropdowns/Dropdown";
 
@@ -30,7 +30,7 @@ const renderUserToggle = (user) => (
 
 const renderUserMenu = (item, index) => (
   <Link to="/" key={index}>
-    <div className="user__item">
+    <div className="topnav__right__user__item">
       <i className={item.icon}></i>
       <span>{item.content}</span>
     </div>

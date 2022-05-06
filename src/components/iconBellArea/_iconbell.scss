@@ -1,0 +1,14 @@
+@use '../../assets/scss/_styles' as *;
+
+.icon{
+  background-color: gold;
+  font-size:24px;
+
+    &__active{
+      color:map-get($colors, text, primary);
+    }
+    &__normal{
+      color:map-get($colors, text, primary);
+    }
+  
+}
