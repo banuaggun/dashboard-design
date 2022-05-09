@@ -7,7 +7,11 @@ import logoText from "../../assets/logo/logo-text.png";
 
 import logoIcon from "../../assets/logo/logo-icon.png";
 
-import "./sidebar-3.css";
+//import "./sidebar-3.css";
+
+import "./_sidebar.scss";
+
+import "./_sidebarinactive.scss";
 
 //import "./responsiveSidebar.css";
 
@@ -25,13 +29,13 @@ const Sidebar = (props) => {
 
   return (
     <div className={`sidebar ${inactive ? "inactive" : ""}`}>
-      <div className="top__area">
-        <div className="logo">
+      <div className="sidebar__top__area">
+        <div className="sidebar__top__area__logo">
           <img src={logoIcon} alt="logo icon" />
           <img src={logoText} alt="logo text" />
         </div>
 
-        <div className="toggle__menu__btn">
+        <div className="sidebar__top__area__toggle__menu__btn">
           <div onClick={() => setInactive(!inactive)}>
             {inactive ? (
               <i className="bx bxs-right-arrow-square"></i>
@@ -54,8 +58,12 @@ const Sidebar = (props) => {
             {" "}
             <div className="sidebar__menu__item__area">
               <div className="sidebar__menu__item__area__list">
-                <div className="sidebar__menu__item__icon">{nav.icon}</div>
-                <div className="sidebar__menu__item__text">{nav.text}</div>{" "}
+                <div className="sidebar__menu__item__area__list__icon">
+                  {nav.icon}
+                </div>
+                <div className="sidebar__menu__item__area__list__text">
+                  {nav.text}
+                </div>{" "}
               </div>
             </div>
           </Link>

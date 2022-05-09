@@ -2,18 +2,19 @@
 @use '../../assets/scss/_mixins' as *;
 
 .topnav{
-  width:calc(100% - 320px);
+  width:calc(100% - 290px);
   height:90px;
-  position:absolute;
+  position:fixed;
   top:0;
   right:10px;
-  left:310px;
+  left:280px;
   display:flex;
   align-items:flex-end;
   justify-content:space-between;
   padding:10px;
   border:1px solid red;
   z-index:10;
+  background-color:map-get($colors, background, base);
 
   /* 400 ve daha küçük ekranlar için */
 
@@ -56,6 +57,7 @@
       border:1px solid gray;
       padding:0;
       margin:0;
+      z-index:40;
     }
 
     &__user__item, &__notification__item{
@@ -86,7 +88,8 @@
 
 
 .sidebar.inactive ~.topnav{
-  width:calc(100% - 130px);
-  left:120px;
-  right:20px;
+  width:calc(100% - 90px);
+  left:80px;
+  right:10px;
+  z-index:20;
 }

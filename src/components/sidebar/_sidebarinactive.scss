@@ -1,0 +1,28 @@
+.sidebar.inactive{
+  width:80px;
+  min-width:80px;
+  height:100%;
+  border:1px solid blue;
+  z-index:20;
+
+   .sidebar__top__area{
+      &__logo{
+        img:nth-child(2){
+          display:none;
+        }
+      }
+    }
+
+    .sidebar__menu{
+      &__item{
+        &__area{
+          
+          &__list{
+            &__text{
+              display:none;
+            }
+          }
+        }
+      }
+    }
+}
