@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 
-import "./Dropdown.css";
+//import "./Dropdown.css";
+
+import "./_dropdown.scss";
 
 import IconBell from "../iconBellArea/IconBell";
 
@@ -25,20 +27,20 @@ const Dropdown = (props) => {
   clickOutsideRef(dropdownContentEl, dropdownToggleEl);
   return (
     <div className="dropdown">
-      <button ref={dropdownToggleEl} className="dropdownToggle">
+      <button ref={dropdownToggleEl} className="dropdown__toggle">
         {props.renderIcon ? <IconBell /> : ""}
         {props.badge ? (
-          <span className="dropdownToggle-badge">{props.badge}</span>
+          <span className="dropdown__toggle__badge">{props.badge}</span>
         ) : (
           ""
         )}
         {props.customToggle ? props.customToggle() : ""}
       </button>
 
-      <div ref={dropdownContentEl} className="dropdownContent">
-        <div className="listItem">
+      <div ref={dropdownContentEl} className="dropdown__content">
+        <div className="dropdown__content__list">
           {props.renderHeader ? (
-            <div className="dropdownHeader">{props.renderHeader()}</div>
+            <div className="dropdown__content__list__header">{props.renderHeader()}</div>
           ) : (
             ""
           )}
@@ -50,7 +52,7 @@ const Dropdown = (props) => {
         </div>
         <div>
           {props.renderFooter ? (
-            <div className="dropdownFooter">{props.renderFooter()}</div>
+            <div className="dropdown__content__footer">{props.renderFooter()}</div>
           ) : (
             ""
           )}

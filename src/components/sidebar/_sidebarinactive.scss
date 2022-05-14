@@ -1,11 +1,19 @@
+@use '../../assets/scss/_styles' as *;
+@use '../../assets/scss/_mixins' as *;
+
 .sidebar.inactive{
   width:80px;
   min-width:80px;
   height:100%;
-  border:1px solid blue;
-  z-index:20;
+
+  @include responsive('medium'){
+    min-width:140px;
+    width:140px;
+    
+  }
 
    .sidebar__top__area{
+
       &__logo{
         img:nth-child(2){
           display:none;

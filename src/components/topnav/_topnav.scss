@@ -2,7 +2,7 @@
 @use '../../assets/scss/_mixins' as *;
 
 .topnav{
-  width:calc(100% - 290px);
+  width:calc(100% - 280px);
   height:90px;
   position:fixed;
   top:0;
@@ -12,11 +12,9 @@
   align-items:flex-end;
   justify-content:space-between;
   padding:10px;
-  border:1px solid red;
-  z-index:10;
+  z-index:20;
   background-color:map-get($colors, background, base);
-
-  /* 400 ve daha küçük ekranlar için */
+  box-shadow:map-get($shadows, mediumShadow);
 
   &__left{
     border:1px solid green;
@@ -31,10 +29,20 @@
     justify-content:flex-end;
     position:absolute;
     right:0px;
+    
+    @include responsive('xsmall'){
+      right:30px;
+    }
+
+    @include responsive('medium'){
+      right:40px;
+    }
+
     &__user{
       display:inline-flex;
       align-items:center;
-      border:1px solid aquamarine;
+      align-content:center;
+      margin-left:0px;
       &__image{
         width: 30px;
         height:30px;
@@ -54,19 +62,28 @@
     }
 
     &__notifications{
-      border:1px solid gray;
+      width:40px;
+      height:40px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
       padding:0;
-      margin:0;
+      margin:0px;
       z-index:40;
+
+      @include responsive('xsmall'){
+        margin-right:10px;
+      }
+
     }
 
     &__user__item, &__notification__item{
       text-decoration: none;
-  display: flex;
-  align-items: center;
-  padding-top: 5px;
-  margin-bottom: 20px;
-  border-bottom: 3px solid rgba(0, 0, 0, 0);
+      display: flex;
+      align-items: center;
+      padding-top: 5px;
+      margin-bottom: 20px;
+      border-bottom: 3px solid rgba(0, 0, 0, 0);
  
   
     }
@@ -88,8 +105,14 @@
 
 
 .sidebar.inactive ~.topnav{
-  width:calc(100% - 90px);
+  width:calc(100% - 80px);
   left:80px;
-  right:10px;
+  right:0px;
   z-index:20;
+
+  @include responsive('medium'){
+    width:calc(100% - 140px);
+    left:140px;
+    right:0px;
+  }
 }

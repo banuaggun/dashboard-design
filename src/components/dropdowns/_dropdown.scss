@@ -1,4 +1,5 @@
 @use "../../assets/scss/styles" as *;
+@use '../../assets/scss/_mixins' as *;
 
 .dropdown{
   position:relative;
@@ -23,16 +24,21 @@
       align-items: center;
       justify-content: center;
       position:absolute;
-      top: -1px;
-      right: 3px;
+      top: 0px;
+      right: 0px;
       width: 15px;
       height: 15px;
+      padding:2px;
       border-radius: 50%;
-      font-size: 12px;
+      font-size: 0.75rem; /* 12px*/
       font-weight: 600;
-      color:darkorchid;
-      background-color:aqua;
-      border:1px solid blue;
+      color:map-get($colors, text, light);
+      background-color:map-get($colors, background, darkblue);
+
+      @include responsive('medium'){
+        top:0px;
+        right:-2px;
+      }
     }
   }
 
@@ -45,30 +51,29 @@
     width: max-content;
     max-width: 250px;
     padding: 20px;
-  background-color: map-get($colors, background, light);
-  box-shadow: 0 4px 6px map-get($colors, icon, dark);
-  border-radius: 5px;
-  border: 1px solid map-get($colors, icon, dark);
-  overflow: hidden;
-  transition: transform 0.3s ease 0s;
-  transform-origin: top right;
-  transform: scale(0);
-  
-  color: map-get($colors, text, base);
+    background-color: map-get($colors, background, light);
+    box-shadow: 0 4px 6px map-get($colors, icon, dark);
+    border-radius: 5px;
+    border: 1px solid map-get($colors, icon, dark);
+    overflow: hidden;
+    transition: transform 0.3s ease 0s;
+    transform-origin: top right;
+    transform: scale(0);
+    color: map-get($colors, text, base);
 
-  &.active{
-    transform: scale(1);
-    transition: transform 0.5s $transitionCubic;
-  }
+    &.active{
+      transform: scale(1);
+      transition: transform 0.5s $transitionCubic;
+    }
 
     &__list{
       &__header{
-        h5{
+      
           font-size: 1.2rem;
           color: map-get($colors, text, head);
           padding-bottom: 20px;
           text-align: left;
-        }
+        
        
       }
     }

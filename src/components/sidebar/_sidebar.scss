@@ -1,4 +1,5 @@
 @use '../../assets/scss/_styles' as *;
+@use '../../assets/scss/_mixins' as *;
 
 .sidebar{
   width:280px;
@@ -7,10 +8,14 @@
   top:0;
   left:0;
   overflow:hidden;
-  z-index:20;
+  z-index:40;
   transition: width 0.2s ease-in;
   color:map-get($colors, text, base);
+  box-shadow:map-get($shadows, shadow);
  
+  @include responsive('medium'){
+    width:300px;
+  }
   &__top__area{
     height:90px;
     background-color: map-get($colors, background, base);
@@ -20,6 +25,9 @@
     align-items:flex-end;
     align-content:center;
 
+    @include responsive('medium'){
+      padding:0 0 13px 40px;
+    }
     &__logo{
       display:flex;
       align-items:center;
@@ -66,13 +74,15 @@
     transition: width 0.1s ease-in;
     background-color: map-get($colors, background, base);
     box-shadow:map-get($colors, shadow, boxShadow);
-    
+   
     &__item{
       display:flex;
       margin:15px 10px;
       transition: color 0.3s ease 0s;
       border-bottom: 4px solid rgba(0, 0, 0, 0);
-     
+      @include responsive('medium'){
+        margin:15px 20px 15px 40px;
+      }
       &:hover, &.active{
         text-decoration:none;
         color:map-get($colors, text, primary);
@@ -81,6 +91,9 @@
         border-image-slice:1;
         border-image-source:linear-gradient(to right, map-get($colors, background, darkblue), map-get($colors, background, light));
         margin-left:10px;
+        @include responsive('medium'){
+          margin-left:40px;
+        }
       }
       &__area{
         width:100%;
@@ -94,11 +107,20 @@
           &__icon{
             width:40px;
             height:40px;
-            font-size:1.1rem;
+            font-size:1.1rem; /* 17.6px */
             display: flex;
             align-items: center;
             justify-content: center;
             margin-left:0px;
+
+            @include responsive('xsmall'){
+              font-size:1.2rem; /* 19.2px */
+            }
+
+            @include responsive('small'){
+              font-size:1.4rem; /* 22.4px */
+            }
+            
           }
           &__text{
             font-weight:600;
