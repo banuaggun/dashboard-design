@@ -6,14 +6,14 @@ import Chart from "react-apexcharts";
 
 import Table from "../../components/Tables/Table";
 
-import StatusCards from "../../components/StatusCard/StatusCards";
+import StatusCard from "../../components/statusCard/StatusCard";
 
 import statusCards from "../../assets/data/statusCard.json";
 
 import Badge from "../../components/Badges/Badge.jsx";
 
 //import "./Dashboard.css";
-import "./dashboard.scss";
+import "./_dashboard.scss";
 
 const chartOptions = {
   series: [
@@ -172,15 +172,15 @@ const renderOrderBody = (item, index) => (
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <h2 className="page__header">Dashboard</h2>
-      <div className="row">
-        <div className="col-6">
-          <div className="row">
+      <h2 className="dashboard__header">Dashboard</h2>
+      <div className="dashboard__first">
+        <div className="dashboard__first__left">
+          <div className="dashboard__first__left__status__card">
             {statusCards.map((item, index) => (
-              <div className="col-6">
+              <div className="dashboard__first__left__status__card__data">
                 {/*statuscard data*/}
 
-                <StatusCards
+                <StatusCard
                   title={item.title}
                   count={item.count}
                   icon={item.icon}

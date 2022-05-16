@@ -5,6 +5,7 @@
   width:80px;
   min-width:80px;
   height:100%;
+  z-index:0;
 
   @include responsive('medium'){
     min-width:140px;

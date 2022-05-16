@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./main-layout.css";
+import "./_mainLayout.scss";
 
 import { Outlet } from "react-router-dom";
 

@@ -11,6 +11,7 @@
   z-index:40;
   transition: width 0.2s ease-in;
   color:map-get($colors, text, base);
+  background-color:map-get($colors, background, base);
   box-shadow:map-get($shadows, shadow);
  
   @include responsive('medium'){
