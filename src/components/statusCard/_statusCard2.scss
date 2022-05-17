@@ -1,0 +1,65 @@
+@use "../../assets/scss/_styles" as *;
+@use "../../assets/scss/_mixins" as *;
+
+.status__card{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  grid-template-rows:auto auto;
+  grid-row-gap:15px;
+  grid-column-gap:20px;
+  z-index:1;
+  transition:color 0.5s ease 0s;
+  color:map-get($colors, text, base);
+  background-color:map-get($colors, background, light);
+  border:1px solid map-get($colors, icon, dark);
+  box-shadow:map-get($shadows, lightShadow);
+  border-radius:map-get($radius, radius2);
+ width:calc(100% - 40px);
+ margin-left:auto;
+ margin-right:auto;
+  height:auto;
+  padding:30px;
+  position:relative;
+
+  @include responsive('xxsmall'){
+    color:red;
+    width:100%;
+  }
+
+  /*
+  @include responsive('xxsmall'){
+    width:calc(100% - 20px);
+   margin:15px 10px;
+  }
+  @include responsive('xsmall'){
+    width:calc(100% + 20px);
+    margin:15px 20px 15px 0px;
+    overflow-x:hidden;
+  }
+  @include responsive('small'){
+    width:calc(100% + 80px);
+    margin:15px 40px 15px 0;
+  }
+  */
+  
+  &__title{
+    display:inline-flex;
+    align-items:space-between;
+    margin-bottom:10px;
+    border:1px solid green;
+  }
+  &__info{
+    display:inline-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:20px;
+    &__count{
+      font-size:1.5rem;
+
+    }
+    &__icon{
+      font-size:1.8rem;
+    }
+  }
+}
