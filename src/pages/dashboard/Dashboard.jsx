@@ -189,7 +189,7 @@ const Dashboard = () => {
             ))}
           </div>
         </div>
-        <div className="col-6">
+        <div className="first__right">
           <div className="card fullHeight">
             {/* graphic area */}
             <Chart

@@ -4,7 +4,8 @@
 .dashboard{
   background-color:map-get($colors, background, base);
   position:relative;
-
+  overflow-x:hidden;
+  
   &__header{
     font-size:1.75rem; /* 42px = 2.63rem, 28px=1.75rem*/
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -13,6 +14,36 @@
     margin:20px 0 20px 30px;
   }
 
+  &__first{
+    display:flex;
+    flex-direction:column;
+    margin-left:0px;
+    margin-right:auto;
+
+    @include responsive('xxsmall'){
+      margin-left:0px;
+    }
+    @include responsive('xsmall'){
+      margin-left:0px;
+    }
+    &__left{
+      width:100%;
+      height:auto;
+     
+      &__status__card{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-evenly;
+      }
+    }
+    &__right{
+      width:100%;
+      height:auto;
+    }
+  }
+
+  .col-6{display:none;}
+  /*
   &__first{
     display:grid;
     grid-template-columns:1fr;
@@ -24,11 +55,15 @@
     width:calc(100% - 20px);
 
     &__left{
-      margin:15px 20px;
       overflow-x:hidden;
-  display:grid;
-  grid-template-columns:calc(100% - 60px);
-  grid-template-rows: auto auto auto auto;
+      display:grid;
+      margin-left:auto;
+      margin-right:auto;
+      grid-template-columns:calc(100% - 60px);
+      grid-template-rows: auto auto auto auto;
+border:1px solid blue;
     }
   }
+  */
+
 }
