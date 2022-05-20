@@ -1,85 +1,215 @@
-import React, { Component } from "react";
-
-import Table from "../../components/Tables/Table";
-
-import CustomerList from "../../assets/data/CustomerList.json";
-
-import "./customer.css";
+import React, { useState, Fragment } from "react";
 
 import Search from "../../components/searchArea/Search";
 
-const customerHead = ["", "name", "total orders", "total spend"];
+import CustomerList from "../../assets/data/CustomerList.json";
 
-/* phone, email, location */
+import Pagination from "../../components/pagination/Pagination";
 
-const renderHead = (item, index) => <th key={index}>{item}</th>;
+import { nanoid } from "nanoid";
 
-const renderBody = (item, index) => (
-  <tr key={index}>
-    <td
-      style={{
-        textAlign: "center",
-        fontWeight: "600",
-        border: "1px solid transparent",
-        padding: "5px 2px",
-        color: "var(--textColor)"
-      }}
-    >
-      {item.id}
-    </td>
-    <td>{item.name}</td>
-    <td>{item.totalOrders}</td>
-    <td>{item.totalSpend}</td>
-  </tr>
-);
+import EdiTableRow from "../../components/ediTableRow/EdiTableRow";
 
-const renderDataShow = (item, index) => (
-  <div>
-    <tr key={index}>
-      <td>{item.email}</td>
-      <td>{item.phone}</td>
-      <td>{item.location}</td>
-    </tr>
-  </div>
-);
+import Accordion from "../../components/accordion/Accordion";
 
-/* 
-<td>{item.email}</td>
-  <td>{item.phone}</td>
-    <td>{item.location}</td> 
-    */
+import { Modal, Button } from "react-bootstrap";
 
-class Customers extends Component {
-  render() {
-    return (
-      <div>
-        <h2 className="pageHeader">Customers</h2>
-        <div className="topnav__left">
-          <Search />
+import AddForm from "../../components/addCustomer/AddForm";
+
+const Customers = () => {
+  const pageSize = 6;
+  const pageLength = CustomerList.length / pageSize;
+  const [page, setPage] = useState(1);
+  const [contacts, setContacts] = useState(
+    CustomerList.slice(page - 1, page * pageSize)
+  );
+
+  const handlePage = (thePage) => {
+    setPage(thePage);
+    const t = CustomerList.slice((thePage - 1) * pageSize, thePage * pageSize);
+    setContacts(t);
+  };
+
+  const prevHandler = (thePage) => {
+    if (thePage === 1) {
+      handlePage(1);
+    } else {
+      handlePage(Number(thePage) - 1);
+    }
+  };
+
+  const nextHandler = (thePage, thePageLength) => {
+    if (thePage < thePageLength) {
+      handlePage(Number(thePage) + 1);
+    }
+  };
+
+  const [addFormData, setAddFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    location: ""
+  });
+
+  const [editFormData, setEditFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    location: ""
+  });
+
+  const [editContactId, setEditContactId] = useState(null);
+
+  const handleEditFormChange = (event) => {
+    event.preventDefault();
+
+    const fieldName = event.target.getAttribute("name");
+    const fieldValue = event.target.value;
+
+    const newFormData = { ...editFormData };
+    newFormData[fieldName] = fieldValue;
+
+    setEditFormData(newFormData);
+  };
+
+  const handleEditClick = (event, contact) => {
+    event.preventDefault();
+
+    setEditContactId(contact.id);
+
+    const formValues = {
+      name: contact.name,
+      email: contact.email,
+      phone: contact.phone,
+      location: contact.location
+    };
+
+    setEditFormData(formValues);
+  };
+
+  const handleCancelClick = () => {
+    setEditContactId(null);
+  };
+
+  const handleDeleteClick = (contactId) => {
+    const newContacts = [...contacts];
+
+    const index = contacts.findIndex((contact) => contact.id === contactId);
+
+    newContacts.splice(index, 1);
+
+    setContacts(newContacts);
+  };
+
+  const handleAddFormChange = (event) => {
+    event.preventDefault();
+
+    const fieldName = event.target.getAttribute("name");
+    const fieldValue = event.target.value;
+
+    const newFormData = { ...addFormData };
+    newFormData[fieldName] = fieldValue;
+
+    setAddFormData(newFormData);
+  };
+
+  const handleAddFormSubmit = (event) => {
+    event.preventDefault();
+
+    const newContact = {
+      id: nanoid(),
+      name: addFormData.name,
+      email: addFormData.email,
+      phone: addFormData.phone,
+      location: addFormData.location
+    };
+
+    const newContacts = [...contacts, newContact];
+    setContacts(newContacts);
+    event.target.value = "";
+  };
+
+  const handleEditFormSubmit = (event) => {
+    event.preventDefault();
+
+    const editedContact = {
+      id: editContactId,
+      name: editFormData.name,
+      email: editFormData.email,
+      phone: editFormData.phone,
+      location: editFormData.location
+    };
+
+    const newContacts = [...contacts];
+
+    const index = contacts.findIndex((contact) => contact.id === editContactId);
+
+    newContacts[index] = editedContact;
+
+    setContacts(newContacts);
+    setEditContactId();
+  };
+
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+
+  return (
+    <div className="customer">
+      <Search />
+      <form onSubmit={handleEditFormSubmit}>
+        <h2>Customer List</h2>
+        <div>
+          <Button onClick={handleShow}>Add</Button>
+          <Modal show={show} onHide={handleClose}>
+            <h2>Add Form Customer</h2>
+
+            <AddForm
+              addFormData={addFormData}
+              handleAddFormChange={handleAddFormChange}
+              handleAddFormSubmit={handleAddFormSubmit}
+            />
+
+            <Button onClick={handleClose} variant="secondary">
+              Close button
+            </Button>
+          </Modal>
         </div>
-        <div className="row">
-          <div className="col-12 customerTableArea">
-            <div className="customerTableInnerArea">
-              <div className="customerTableInner">
-                <Table
-                  limit="10"
-                  headData={customerHead}
-                  renderHead={(item, index) => renderHead(item, index)}
-                  bodyData={CustomerList}
-                  renderBody={(item, index) => renderBody(item, index)}
-                />
-
-                <div
-                  innerData={CustomerList}
-                  renderDataShow={(item, index) => renderDataShow(item, index)}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+      </form>
+      <table>
+        <tbody>
+          <tr>
+            {contacts.map((contact) => (
+              <Fragment>
+                {editContactId === contact.id ? (
+                  <EdiTableRow
+                    editFormData={editFormData}
+                    handleEditFormChange={handleEditFormChange}
+                    handleCancelClick={handleCancelClick}
+                  />
+                ) : (
+                  <Accordion
+                    contact={contact}
+                    handleEditClick={handleEditClick}
+                    handleDeleteClick={handleDeleteClick}
+                  />
+                )}
+              </Fragment>
+            ))}
+          </tr>
+        </tbody>
+        <Pagination
+          page={page}
+          pages={pageLength}
+          onClick={(pageEvent) => {
+            handlePage(pageEvent);
+          }}
+          prevHandler={() => prevHandler(page)}
+          nextHandler={() => nextHandler(page, pageLength)}
+        />
+      </table>
+    </div>
+  );
+};
 
 export default Customers;
