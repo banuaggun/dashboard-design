@@ -1,0 +1,111 @@
+/*
+.tableWrapper {
+  overflow-y: auto;
+}
+*/
+
+.tableWrapper {
+  /* border: 1px solid green; */
+
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  min-width: 400px;
+  color: var(--textColor4);
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+tr {
+  text-align: justify;
+}
+
+td {
+  /*border: 1px solid blue; */
+  padding: 15px 5px;
+}
+th {
+  padding: 15px 5px;
+}
+
+th,
+td {
+  text-transform: capitalize;
+  /*border: 2px solid purple;*/
+}
+
+tbody > tr:hover {
+  background-image: -webkit-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  background-image: -moz-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  background-image: -ms-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  background-image: -o-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  background-image: linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  color: var(--textColor2);
+}
+
+.tablePagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tablePaginationItem ~ .tablePaginationItem {
+  margin-left: 10px;
+}
+
+.tablePaginationItem {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tablePaginationItem.active,
+.tablePaginationItem.active:hover {
+  background-color: var(--background2);
+  color: var(--textColor2);
+  font-weight: 600;
+}
+
+.tablePaginationItem:hover {
+  color: var(--textColor2);
+  background-color: var(--background4);
+}

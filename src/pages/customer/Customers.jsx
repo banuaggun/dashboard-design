@@ -16,6 +16,8 @@ import { Modal, Button } from "react-bootstrap";
 
 import AddForm from "../../components/addCustomer/AddForm";
 
+import "./_customers.scss";
+
 const Customers = () => {
   const pageSize = 6;
   const pageLength = CustomerList.length / pageSize;
@@ -156,12 +158,20 @@ const Customers = () => {
 
   return (
     <div className="customer">
-      <Search />
-      <form onSubmit={handleEditFormSubmit}>
+      <div className="customer__search">
+        <Search />
+      </div>
+      <form onSubmit={handleEditFormSubmit} className="customer__form">
         <h2>Customer List</h2>
         <div>
-          <Button onClick={handleShow}>Add</Button>
-          <Modal show={show} onHide={handleClose}>
+          <buton onClick={handleShow} className="customer__form__button">
+            <i class="bx bx-plus-circle"></i>
+          </buton>
+          <Modal
+            show={show}
+            onHide={handleClose}
+            className="customer__form__modal"
+          >
             <h2>Add Form Customer</h2>
 
             <AddForm

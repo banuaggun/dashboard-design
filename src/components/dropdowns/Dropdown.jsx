@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 
 //import "./Dropdown.css";
 
-import "./_dropdown.scss";
-
 import IconBell from "../iconBellArea/IconBell";
+
+import "./_dropdown.scss";
 
 const clickOutsideRef = (contentRef, toggleRef) => {
   document.addEventListener("mousedown", (e) => {
@@ -40,7 +40,9 @@ const Dropdown = (props) => {
       <div ref={dropdownContentEl} className="dropdown__content">
         <div className="dropdown__content__list">
           {props.renderHeader ? (
-            <div className="dropdown__content__list__header">{props.renderHeader()}</div>
+            <div className="dropdown__content__list__header">
+              {props.renderHeader()}
+            </div>
           ) : (
             ""
           )}
@@ -52,7 +54,9 @@ const Dropdown = (props) => {
         </div>
         <div>
           {props.renderFooter ? (
-            <div className="dropdown__content__footer">{props.renderFooter()}</div>
+            <div className="dropdown__content__footer">
+              {props.renderFooter()}
+            </div>
           ) : (
             ""
           )}

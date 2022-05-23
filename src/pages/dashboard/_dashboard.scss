@@ -17,23 +17,22 @@
   &__first{
     display:flex;
     flex-direction:column;
-    margin-left:0px;
-    margin-right:auto;
 
-    @include responsive('xxsmall'){
-      margin-left:0px;
-    }
-    @include responsive('xsmall'){
-      margin-left:0px;
-    }
+   
     &__left{
-      width:100%;
+      width:calc(100% - 40px);
       height:auto;
+      margin:10px 20px 0 20px;
+
+      @include responsive('xxsmall'){
+        width:calc(100% - 100px);
+        margin:10px 50px 0 50px;
+      }
      
-      &__status__card{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:space-evenly;
+      &__statusCard{
+        display: flex;
+        justify-content:center;
+        align-items:center;
       }
     }
     &__right{
