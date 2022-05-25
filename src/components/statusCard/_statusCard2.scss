@@ -1,5 +1,4 @@
-@use "../../assets/scss/_styles" as *;
-@use "../../assets/scss/_mixins" as *;
+@use "../../assets/scss/_variables" as *;
 
 .status__card{
   display:grid;
@@ -25,7 +24,10 @@
     color:red;
     width:100%;
   }
-
+@include responsive('xsmall'){
+  color:purple;
+  width:50%;
+}
   /*
   @include responsive('xxsmall'){
     width:calc(100% - 20px);

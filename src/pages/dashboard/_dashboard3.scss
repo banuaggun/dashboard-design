@@ -1,0 +1,82 @@
+@use "../../assets/scss/_variables" as *;
+
+.dashboard{
+  background-color:lightseagreen;
+
+  &__header{
+    margin:20px;
+    border:1px solid green;
+  }
+
+  &__first{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:auto;
+    background-color:lightgreen;
+
+    @include responsive('large'){
+      display:flex;
+      flex-wrap:wrap;
+      flex-direction:row;
+      justify-content:space-between;
+    }
+    
+    &__left{
+      border:1px solid red;
+      display:flex;
+      justify-content:center;
+     
+      width:100%;
+      @include responsive('large'){
+        width:50%;
+      }
+      &__status__card{
+        @include responsive('xsmall'){
+          display:flex;
+          flex-direction:row;
+          justify-content:space-around;
+          flex-wrap:wrap;
+        }
+        @include responsive('small'){
+          display:flex;
+          flex-direction:row;
+          justify-content:space-around;
+          flex-wrap:wrap;
+        }
+        @include responsive('medium'){
+          display:flex;
+          flex-direction:row;
+          justify-content:space-evenly;
+          flex-wrap:wrap;
+        }
+        @include responsive('large'){
+          display:flex;
+          flex-direction:row;
+          justify-content:space-evenly;
+          flex-wrap:wrap;
+        }
+        
+      }
+     
+    }
+    
+    &__right{
+      display:flex;
+      width:100%;
+      @include responsive('large'){
+        width:50%;
+        display:flex;
+      }
+    }
+   
+  
+  }
+
+  &__col__6{
+    display:none;
+    @include responsive('large'){
+      display:none;
+    }
+  }
+}

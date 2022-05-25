@@ -2,7 +2,7 @@ import React from "react";
 
 //import "./StatusCards.css";
 
-import "./_statusCard.scss";
+import "./_statusCard3.scss";
 
 const StatusCard = (props) => {
   return (

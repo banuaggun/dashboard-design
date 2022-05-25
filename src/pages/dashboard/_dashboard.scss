@@ -1,5 +1,4 @@
-@use '../../assets/scss/_styles' as *;
-@use '../../assets/scss/_mixins' as *;
+@use '../../assets/scss/_variables' as *;
 
 .dashboard{
   background-color:map-get($colors, background, base);
@@ -20,19 +19,31 @@
 
    
     &__left{
-      width:calc(100% - 40px);
+      width:calc(100% - 30px);
       height:auto;
-      margin:10px 20px 0 20px;
+      margin:10px 20px 0 10px;
+      display:flex;
 
-      @include responsive('xxsmall'){
-        width:calc(100% - 100px);
-        margin:10px 50px 0 50px;
+      @include responsive('xsmall'){
+        width:100%;
+        background-color:pink;
+        flex-direction:row;
+        display:flex;
+        margin:10px 10px 0 10px;
+
       }
-     
+
+      
       &__statusCard{
         display: flex;
         justify-content:center;
         align-items:center;
+
+        @include responsive('xsmall'){
+          display:flex;
+          flex-direction:row;
+          flex-wap:wrap;
+        }
       }
     }
     &__right{

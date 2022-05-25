@@ -161,30 +161,28 @@ const Customers = () => {
       <div className="customer__search">
         <Search />
       </div>
+      <h2>Customer List</h2>
       <form onSubmit={handleEditFormSubmit} className="customer__form">
-        <h2>Customer List</h2>
-        <div>
-          <buton onClick={handleShow} className="customer__form__button">
-            <i class="bx bx-plus-circle"></i>
-          </buton>
-          <Modal
-            show={show}
-            onHide={handleClose}
-            className="customer__form__modal"
-          >
-            <h2>Add Form Customer</h2>
+        <buton onClick={handleShow} className="customer__form__button">
+          <i class="bx bx-plus-circle"></i>
+        </buton>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          className="customer__form__modal"
+        >
+          <h2>Add Form Customer</h2>
 
-            <AddForm
-              addFormData={addFormData}
-              handleAddFormChange={handleAddFormChange}
-              handleAddFormSubmit={handleAddFormSubmit}
-            />
+          <AddForm
+            addFormData={addFormData}
+            handleAddFormChange={handleAddFormChange}
+            handleAddFormSubmit={handleAddFormSubmit}
+          />
 
-            <Button onClick={handleClose} variant="secondary">
-              Close button
-            </Button>
-          </Modal>
-        </div>
+          <Button onClick={handleClose} variant="secondary">
+            Close button
+          </Button>
+        </Modal>
       </form>
       <table>
         <tbody>

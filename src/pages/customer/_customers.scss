@@ -1,3 +1,5 @@
+@use '../../assets/scss/_variables' as *;
+
 .customer{
   border:1px solid blue;
   overflow-x:hidden;
@@ -7,11 +9,20 @@
     border:1px solid fuchsia;
   }
 
+  h2{
+    display:inline-flex;
+    align-content:center;
+    justify-items:center;
+    border:1px solid black;
+    color:green;
+    margin:0 0 0 30px;
+  }
+
   &__form{
     border:1px solid purple;
     margin:30px;
     display:flex;
-    justify-content:space-between;
+    justify-content:flex-end;
 
     &__button{
       width:44px;

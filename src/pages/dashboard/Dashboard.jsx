@@ -13,7 +13,7 @@ import Table from "../../components/Tables/Table";
 import Badge from "../../components/Badges/Badge.jsx";
 
 //import "./Dashboard.css";
-import "./_dashboard.scss";
+import "./_dashboard3.scss";
 
 const chartOptions = {
   series: [
@@ -201,7 +201,7 @@ const Dashboard = () => {
             />
           </div>
         </div>
-        <div className="col-6">
+        <div className="dashboard__col__6 col-6">
           <div className="card">
             <div className="cardHeader tableCardHeader">
               <h3>Top Customers</h3>
