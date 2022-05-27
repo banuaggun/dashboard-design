@@ -1,50 +1,117 @@
-@use "../../assets/scss/_variables" as *;
+@use "../../assets/scss/_styles" as *;
+
+@use "../../assets/scss/_mixins" as *;
+
 
 .status__card{
-  min-width:200px;
-  height:165px;
-  display:flex;
-  justify-content:space-between;
+  min-width:220px;
+  width:100%;
+  padding:30px;
+  margin:30px auto;
+  height:auto;
   position:relative;
   overflow:hidden;
-  padding:30px;
-  margin-bottom:30px;
-  margin-left:auto;
-  margin-right:auto;
-  transition:color 0.5s ease 0s;
+  
   color:map-get($colors, text, base);
   background-color:map-get($colors, background, light);
   border:1px solid map-get($colors, icon, dark);
   box-shadow:map-get($shadows, lightShadow);
   border-radius:map-get($radius, radius2);
+  transition:color 0.5s ease 0s;
 
   @include responsive('xxsmall'){
-    min-width:220px;
+    min-width:350px;
   }
   @include responsive('xsmall'){
-    min-width:150px;
-    flex-wrap:wrap;
-    flex-direction:row;
+    min-width:200px;
   }
-
   @include responsive('small'){
-    max-width:200px;
-    min-width:100px;
+    min-width:300px;
   }
+  @include responsive('large'){
+    min-width:250px;
+  }
+
+  
+
+  &__title{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:space-between;
+    margin-bottom:10px;
+    z-index:1;
+    
+    
+    span{
+      font-size:1rem;
+      &:hover::before{
+        display:block;
+        z-index:30;
+      }
+    }
+    
+  }
+
+  &__info{
+    width:100%;
+    height:auto;
+    display:inline-flex;
+    flex-direction:row;
+
+    &__count{
+      width:70%;
+      height:auto;
+      z-index:1;
+      display:flex;
+      align-content:flex-start;
+      align-items:center;
+      
+
+      h4{
+        font-size:2.2rem;
+        margin-top:4px;
+      }
+    }
+
+    &__icon{
+      width:30%;
+      height:auto;
+      z-index:1;
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+
+      i{
+        font-size:2.5rem;
+      }
+    }
+  }
+
+  
+  &:before{
+    content:"";
+    width:100%;
+    padding-top:100%;
+    border-radius:50%;
+    background-image:linear-gradient(to top right, map-get($colors, background, darkBlue), map-get($colors, background, hoverBlue));
+    position:absolute;
+    left:-50%;
+    top:0;
+    transform:scale(0);
+    transition:transform 0.8s ease 0s;
+    color:map-get($colors, text, light);
+  }
+
+  &:hover{
+    color:map-get($colors, text, light);
+    box-shadow:2px -4px 0 map-get($colors, background, hoverBlue);
+    &::before{
+      transform:scale(3);
+      color:map-get($colors, text, light);
+    }
+  }
+
 }
-
-
-/*
-border:1px solid red; 
-margin:10px 10px 0px 30px;
-padding:20px;
-display:grid;
-grid-template-columns:calc(100% - 210px);
-z-index:1;
-transition:color 0.5s ease 0s;
-  color:map-get($colors, text, base);
-  background-color:map-get($colors, background, light);
-  border:1px solid map-get($colors, icon, dark);
-  box-shadow:map-get($shadows, lightShadow);
-  border-radius:map-get($radius, radius2);
-*/
