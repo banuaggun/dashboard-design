@@ -36,11 +36,15 @@
       justify-content:center;
       cursor:pointer;
       i{
-        color:#8e8e8e;
+        color:map-get($colors, text, base);
         font-size:2rem;
+        &:hover, &.active, &:focus{
+          color:map-get($colors, text, primary);
+        }
       }
       &:hover, &:focus, &.active{
         background-color: transparent;
+        
         border:none;
         outline:none;
       }
@@ -51,9 +55,37 @@
       top:100px;
       padding:20px;
 
-      h2{
-        padding:40px;
+      &__close{
+        font-size:1rem;
+        font-weight:bold;
+        color:map-get($colors, text, base);
+        text-align:center;
+        vertical-align:middle;
+        padding:0;
+        margin:0 0  20px 0;
+        right:20px;
+        top:20px;
+        position:absolute;
+        border:none;
+        outline:none;
+        background-color:transparent;
+
+        &:hover, &.active, &:focus{
+          outline:none !important;
+          border:none !important;
+          background-color:transparent;
+        }
       }
+
+      h2{
+        display:flex;
+        flex-direction:column;
+        margin:40px 0 0 0;
+        padding:20px 0 20px 30px;
+      }
+
+    
+     
     }
   }
 }

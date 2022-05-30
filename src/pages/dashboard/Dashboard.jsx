@@ -28,7 +28,7 @@ const chartOptions = {
   ],
   options: {
     chart: {
-      background: "transparent"
+      background: "white"
     },
     dataLabels: {
       enabled: false
@@ -190,14 +190,17 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="first__right">
-          <div className="card fullHeight">
+          <div className="first__right__card">
             {/* graphic area */}
             <Chart
               options={chartOptions.options}
               series={chartOptions.series}
               type="line"
               height="100%"
-              className="grafik"
+              top="40px"
+              right="40px"
+              position="absolute"
+              className="first__right__card__graphic"
             />
           </div>
         </div>

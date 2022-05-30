@@ -1,13 +1,15 @@
 import React from "react";
 
+import "./_addForm.scss";
+
 const AddForm = ({ handleAddFormChange, handleAddFormSubmit, addFormData }) => {
   return (
-    <form onSubmit={handleAddFormSubmit}>
+    <form onSubmit={handleAddFormSubmit} className="add__form">
       <input
         type="text"
         name="name"
         required
-        placeholder="enter a name"
+        placeholder="Please enter a name"
         onChange={handleAddFormChange}
         value={addFormData.name}
       ></input>
@@ -15,7 +17,7 @@ const AddForm = ({ handleAddFormChange, handleAddFormSubmit, addFormData }) => {
         type="email"
         name="email"
         required
-        placeholder="enter a email"
+        placeholder="Please enter an email address"
         onChange={handleAddFormChange}
         value={addFormData.email}
       ></input>
@@ -23,7 +25,7 @@ const AddForm = ({ handleAddFormChange, handleAddFormSubmit, addFormData }) => {
         type="number"
         name="phone"
         required
-        placeholder="enter a phone"
+        placeholder="Please enter a phone number"
         onChange={handleAddFormChange}
         value={addFormData.phone}
       ></input>
@@ -31,11 +33,15 @@ const AddForm = ({ handleAddFormChange, handleAddFormSubmit, addFormData }) => {
         type="text"
         name="location"
         required
-        placeholder="enter a location"
+        placeholder="Please enter a location"
         onChange={handleAddFormChange}
         value={addFormData.location}
       ></input>
-      <button type="submit" onClick={handleAddFormSubmit}>
+      <button
+        type="submit"
+        onClick={handleAddFormSubmit}
+        className="add__form__button"
+      >
         {" "}
         Add
       </button>

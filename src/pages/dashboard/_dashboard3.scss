@@ -64,10 +64,24 @@
     &__right{
       display:flex;
       width:100%;
+      height:auto;
+      margin:30px auto;
+      border:1px solid black;
+      
       @include responsive('large'){
         width:50%;
         display:flex;
+        border:1px solid orange;
       }
+
+      &__card{
+        display:none;
+        &__graphic{
+          display:none;
+        }
+      }
+
+     
     }
    
   
@@ -80,3 +94,4 @@
     }
   }
 }
+

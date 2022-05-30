@@ -12,7 +12,7 @@ import EdiTableRow from "../../components/ediTableRow/EdiTableRow";
 
 import Accordion from "../../components/accordion/Accordion";
 
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 
 import AddForm from "../../components/addCustomer/AddForm";
 
@@ -163,14 +163,15 @@ const Customers = () => {
       </div>
       <h2>Customer List</h2>
       <form onSubmit={handleEditFormSubmit} className="customer__form">
-        <buton onClick={handleShow} className="customer__form__button">
-          <i class="bx bx-plus-circle"></i>
-        </buton>
+        <button onClick={handleShow} className="customer__form__button">
+          <i className="bx bx-plus-circle"></i>
+        </button>
         <Modal
           show={show}
           onHide={handleClose}
           className="customer__form__modal"
         >
+          <Modal.Header className="customer__form__modal__close" closeButton />
           <h2>Add Form Customer</h2>
 
           <AddForm
@@ -178,10 +179,6 @@ const Customers = () => {
             handleAddFormChange={handleAddFormChange}
             handleAddFormSubmit={handleAddFormSubmit}
           />
-
-          <Button onClick={handleClose} variant="secondary">
-            Close button
-          </Button>
         </Modal>
       </form>
       <table>
