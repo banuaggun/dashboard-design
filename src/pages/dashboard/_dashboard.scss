@@ -49,6 +49,16 @@
     &__right{
       width:100%;
       height:auto;
+
+      &__card{
+        position:absolute;
+        margin:20px;
+        border:1px solid black;
+
+        &__graphic{
+          color:green;
+        }
+      }
     }
   }
 

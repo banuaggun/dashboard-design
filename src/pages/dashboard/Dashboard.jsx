@@ -189,27 +189,27 @@ const Dashboard = () => {
             ))}
           </div>
         </div>
-        <div className="first__right">
-          <div className="first__right__card">
-            {/* graphic area */}
-            <Chart
-              options={chartOptions.options}
-              series={chartOptions.series}
-              type="line"
-              height="100%"
-              top="40px"
-              right="40px"
-              position="absolute"
-              className="first__right__card__graphic"
-            />
+        <div className="dashboard__first__right">
+          <div className="dashboard__first__right__card__area">
+            <div className="dashboard__first__right__card__area__content card fullHeight">
+              {/* graphic area */}
+              <Chart
+                options={chartOptions.options}
+                series={chartOptions.series}
+                type="line"
+                height="100%"
+                className="dashboard__first__right__card__area__content__graphic"
+              />
+              {/* again arrangement */}
+            </div>
           </div>
         </div>
-        <div className="dashboard__col__6 col-6">
-          <div className="card">
-            <div className="cardHeader tableCardHeader">
+        <div className="dashboard__second col-6">
+          <div className="dashboard__second__left card">
+            <div className="dashboard__second__left__header cardHeader tableCardHeader">
               <h3>Top Customers</h3>
             </div>
-            <div className="cardBody">
+            <div className="dashboard__second__left__body cardBody">
               {/* table area */}
               <Table
                 headData={topCustomers.head}
@@ -218,29 +218,34 @@ const Dashboard = () => {
                 renderBody={(item, index) => renderCustomerBody(item, index)}
               />
             </div>
-            <div className="cardFooter">
+            <div className="dashboard__second__left__footer cardFooter">
               <Link to="/">View All</Link>
             </div>
-          </div>
-        </div>
-        <div className="col-6">
-          <div className="card">
-            <div className="cardHeader">
-              <h3>latest orders</h3>
+          </div>{" "}
+          {/* dashboard__second__left__card */}
+          <div className="dashboard__second__right__card">
+            <div className="col-6">
+              <div className="card">
+                <div className="cardHeader">
+                  <h3>latest orders</h3>
+                </div>
+                <div className="cardBody">
+                  <Table
+                    headData={latestOrders.header}
+                    renderHead={(item, index) => renderOrderHead(item, index)}
+                    bodyData={latestOrders.body}
+                    renderBody={(item, index) => renderOrderBody(item, index)}
+                  />
+                </div>
+                <div className="cardFooter">
+                  <Link to="/">View All</Link>
+                </div>
+              </div>
             </div>
-            <div className="cardBody">
-              <Table
-                headData={latestOrders.header}
-                renderHead={(item, index) => renderOrderHead(item, index)}
-                bodyData={latestOrders.body}
-                renderBody={(item, index) => renderOrderBody(item, index)}
-              />
-            </div>
-            <div className="cardFooter">
-              <Link to="/">View All</Link>
-            </div>
-          </div>
-        </div>
+          </div>{" "}
+          {/* dashboard__second__right__card */}
+        </div>{" "}
+        {/* dashboard__second */}
       </div>
     </div>
   );
