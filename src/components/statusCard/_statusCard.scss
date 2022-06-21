@@ -7,17 +7,20 @@
   min-width:220px;
   width:100%;
   padding:30px;
-  margin:30px auto;
+  
+  margin-left:auto;
+  margin-right:auto;
   height:auto;
   position:relative;
   overflow:hidden;
-  
-  color:map-get($colors, text, base);
+  margin-top:20px;
+  color:map-get($colors, text, head);
   background-color:map-get($colors, background, light);
   border:1px solid map-get($colors, icon, dark);
   box-shadow:map-get($shadows, lightShadow);
   border-radius:map-get($radius, radius2);
   transition:color 0.5s ease 0s;
+  
 
   @include responsive('xxsmall'){
     min-width:350px;
@@ -29,7 +32,7 @@
     min-width:300px;
   }
   @include responsive('large'){
-    min-width:250px;
+    min-width:230px;
   }
 
   
